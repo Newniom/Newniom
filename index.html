@@ -24,14 +24,17 @@
       overflow-x: hidden;
       transition: background 0.4s, color 0.4s;
     }
+
     .background {
       position: fixed;
       width: 100%;
       height: 100%;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       z-index: -1;
       overflow: hidden;
     }
+
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -45,40 +48,88 @@
     .blob4 { width: 120px; height: 120px; background: #A24AE1; top: 70%; left: 85%; animation-delay: 2s; }
     .blob5 { width: 300px; height: 300px; background: #B8E3B0; top: 80%; left: -5%; animation-delay: 5s; }
     .blob6 { width: 100px; height: 100px; background: #62b3ff; top: 85%; left: 65%; animation-delay: 6s; }
+
     @keyframes float {
-      0% { transform: translateY(0px) translateX(0px) scale(1); }
-      50% { transform: translateY(-60px) translateX(40px) scale(1.1); }
+      0%   { transform: translateY(0px) translateX(0px) scale(1); }
+      50%  { transform: translateY(-60px) translateX(40px) scale(1.1); }
       100% { transform: translateY(0px) translateX(0px) scale(1); }
     }
 
     .toolbar {
       width: 100%;
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       z-index: 10;
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(20px);
-      padding: 10px 0;
-      text-align: center;
+      padding: 12px 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .toolbar img.logo {
-      height: 60px;
+
+    .logo img {
+      height: 38px;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 42px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .theme-toggle .toggle-thumb {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      transition: 0.4s ease;
+      background-image: url('https://biaupload.com/do.php?imgf=org-235f16c2882e1.png');
+      background-size: 75%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
+    }
+
+    .theme-toggle input:checked + .toggle-thumb {
+      transform: translateX(20px);
+      background-color: #333;
+      background-image: url('https://biaupload.com/do.php?imgf=org-145450341b2a1.png');
     }
 
     .container {
       max-width: 1000px;
-      margin: 120px auto 60px;
+      margin: 100px auto 60px;
       padding: 0 20px;
       text-align: center;
       position: relative;
       z-index: 1;
     }
+
     .subtitle {
       font-size: 16px;
       line-height: 1.7;
       color: inherit;
     }
+
     .boxes {
       margin-top: 50px;
       display: flex;
@@ -86,48 +137,57 @@
       justify-content: center;
       gap: 20px;
     }
+
     .box {
       width: 280px;
       padding: 20px;
       border-radius: 20px;
       text-decoration: none;
       color: inherit;
+      font-family: 'Calibri', sans-serif;
       display: flex;
       align-items: center;
       gap: 15px;
       border: 1px solid rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .box:hover {
       transform: scale(1.06);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.95);
     }
+
     .box img {
       width: 50px;
       height: 50px;
     }
-    .box-text {
-      text-align: left;
-    }
-    .box-text h3, .box-text strong {
-      color: inherit;
+
+    .box-text h3 {
       margin: 0;
+      font-size: 14px;
+      text-align:  left;
     }
-    .box-text h3 { font-size: 14px; }
-    .box-text strong { font-size: 16px; display: block; }
+
+    .box-text strong {
+      font-size: 16px;
+      display: block;
+    }
 
     .main-channel {
       background: linear-gradient(135deg, rgba(236, 196, 233, 0.5), rgba(236, 196, 233, 0.35));
     }
+
     .sub-channel {
       background: linear-gradient(135deg, rgba(241, 203, 203, 0.5), rgba(241, 203, 203, 0.35));
     }
+
     .youtube {
       background: linear-gradient(135deg, rgba(195, 211, 242, 0.5), rgba(195, 211, 242, 0.35));
     }
+
     .instagram {
       background: linear-gradient(135deg,
         rgba(254, 218, 117, 0.35),
@@ -141,72 +201,64 @@
     .video-section {
       margin-top: 60px;
     }
+
     .video-section h2 {
+      margin-bottom: 20px;
       font-family: 'Calibri';
       font-size: 20px;
-      margin-bottom: 20px;
       color: inherit;
     }
+
     .video-wrapper {
       max-width: 800px;
       margin: auto;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    }
-    .video-wrapper video {
-      width: 100%;
-      border-radius: 20px;
-      background-color: #000;
-      object-fit: cover;
+      backdrop-filter: blur(10px);
     }
 
-    .theme-control {
-      margin: 60px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .theme-btn, .theme-info {
-      cursor: pointer;
-      padding: 10px 20px;
-      background: #f0f0f0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: background 0.3s, color 0.3s;
+    .video-wrapper video {
+      width: 100%;
+      max-height: 450px;
+      border-radius: 20px;
+      object-fit: cover;
+      background-color: #000;
     }
 
     body.dark-mode {
       background: #111;
       color: #fff;
     }
-    body.dark-mode .subtitle {
-      color: #ccc;
-    }
+
     body.dark-mode .box {
       background: rgba(255, 255, 255, 0.08);
-      color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
+
     body.dark-mode .toolbar {
       background: rgba(0, 0, 0, 0.3);
-    }
-    body.dark-mode .theme-btn, body.dark-mode .theme-info {
-      background: #333;
-      color: #fff;
     }
   </style>
 </head>
 <body>
   <div class="background">
-    <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
-    <div class="blob blob4"></div><div class="blob blob5"></div><div class="blob blob6"></div>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+    <div class="blob blob5"></div>
+    <div class="blob blob6"></div>
   </div>
 
   <div class="toolbar">
-    <img class="logo" src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom Logo">
+    <div class="logo">
+      <img src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom Logo">
+    </div>
+    <label class="theme-toggle">
+      <input type="checkbox" id="themeToggle">
+      <span class="toggle-thumb"></span>
+    </label>
   </div>
 
   <div class="container">
@@ -216,37 +268,45 @@
     </div>
 
     <div class="boxes">
-      <a class="box main-channel" href="https://t.me/newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" />
-        <div class="box-text"><h3>Main channel</h3><strong>Newniom notifi’s</strong></div>
+      <a class="box main-channel" href="https://t.me/newniom_main" target="_blank">
+        <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" alt="Telegram" />
+        <div class="box-text">
+          <h3>Main channel</h3>
+          <strong>Newniom notifi’s</strong>
+        </div>
       </a>
-      <a class="box sub-channel" href="https://t.me/newniom_soccer_news" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" />
-        <div class="box-text"><h3>Sub-channel</h3><strong>Soccer news</strong></div>
+      <a class="box sub-channel" href="https://t.me/newniom_soccer" target="_blank">
+        <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" alt="Telegram" />
+        <div class="box-text">
+          <h3>Sub-channel</h3>
+          <strong>Soccer news</strong>
+        </div>
       </a>
       <a class="box instagram" href="https://instagram.com/newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/v832886_ins2.png" />
-        <div class="box-text"><h3>&nbsp;</h3><strong>Short-form videos</strong></div>
+        <img src="https://cdn.imgurl.ir/uploads/v832886_ins2.png" alt="Instagram" />
+        <div class="box-text">
+          <h3>&nbsp;</h3>
+          <strong>Short-form videos</strong>
+        </div>
       </a>
       <a class="box youtube" href="https://youtube.com/@newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/h194435_ou2.png" />
-        <div class="box-text"><h3>newniom</h3><strong>Educational videos</strong></div>
+        <img src="https://cdn.imgurl.ir/uploads/h194435_ou2.png" alt="YouTube" />
+        <div class="box-text">
+          <h3>newniom</h3>
+          <strong>Educational videos</strong>
+        </div>
       </a>
     </div>
 
     <div class="video-section">
       <h2>first video of newniom</h2>
       <div class="video-wrapper">
-        <video controls playsinline poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
-          <source src="https://uploadkon.ir/uploads/85c022_25VID-20250622-171056-446.mp4" type="video/mp4" />
+        <video controls playsinline preload="metadata"
+          poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
+          <source src="https://uploadkon.ir/uploads/85c022_25VID-20250622-171056-446.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-    </div>
-
-    <div class="theme-control">
-      <span id="themeToggle" class="theme-btn">Switch to Dark Mode</span>
-      <div class="theme-info">terms of use</div>
     </div>
   </div>
 
@@ -255,10 +315,10 @@
     let darkMode = localStorage.getItem('theme') === 'dark';
     const applyTheme = () => {
       document.body.classList.toggle('dark-mode', darkMode);
-      toggle.textContent = darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+      toggle.checked = darkMode;
     };
-    toggle.addEventListener('click', () => {
-      darkMode = !darkMode;
+    toggle.addEventListener('change', () => {
+      darkMode = toggle.checked;
       localStorage.setItem('theme', darkMode ? 'dark' : 'light');
       applyTheme();
     });
