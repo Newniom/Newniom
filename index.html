@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Newniom Links</title>
-
-  <!-- ✅ فونت شبیه Calibri -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     @font-face {
       font-family: 'Forte';
       src: local('Forte'), url('Forte.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Calibri';
+      src: local('Calibri'), local('Calibri Body');
     }
 
     * {
@@ -20,9 +21,11 @@
 
     body {
       margin: 0;
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: 'Calibri', sans-serif;
       background: #ffffff;
+      color: #333;
       overflow-x: hidden;
+      transition: background 0.4s, color 0.4s;
     }
 
     .background {
@@ -65,14 +68,16 @@
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      padding: 10px 0;
+      padding: 15px 0;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .logo-image {
-      height: 55px;
-      object-fit: contain;
+    .toolbar .logo {
+      font-family: 'Forte', cursive;
+      font-size: 48px;
+      color: #7A23B9;
+      margin: 0;
     }
 
     .container {
@@ -87,7 +92,7 @@
     .subtitle {
       font-size: 16px;
       line-height: 1.7;
-      color: #3a3a3a;
+      color: inherit;
     }
 
     .boxes {
@@ -103,8 +108,8 @@
       padding: 20px;
       border-radius: 20px;
       text-decoration: none;
-      color: #000;
-      font-family: 'Source Sans 3', sans-serif;
+      color: inherit;
+      font-family: 'Calibri', sans-serif;
       display: flex;
       align-items: center;
       gap: 15px;
@@ -112,18 +117,13 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.25);
-      box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.2),
-        0 4px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .box:hover {
       transform: scale(1.06);
-      box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.25),
-        0 6px 12px rgba(0, 0, 0, 0.1),
-        0 0 0 2px rgba(255, 255, 255, 0.95);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.95);
     }
 
     .box img {
@@ -136,16 +136,19 @@
       text-align: left;
     }
 
+    .box-text h3,
+    .box-text strong {
+      color: inherit;
+    }
+
     .box-text h3 {
       margin: 0;
       font-size: 14px;
-      color: inherit;
     }
 
     .box-text strong {
       font-size: 16px;
       display: block;
-      color: inherit;
     }
 
     .main-channel {
@@ -167,11 +170,18 @@
         rgba(214, 41, 118, 0.35),
         rgba(150, 47, 191, 0.35),
         rgba(79, 91, 213, 0.35));
-      color: black !important;
+      color: white;
     }
 
     .video-section {
       margin-top: 60px;
+    }
+
+    .video-section h2 {
+      margin-bottom: 20px;
+      font-family: 'Calibri';
+      font-size: 20px;
+      color: inherit;
     }
 
     .video-wrapper {
@@ -194,18 +204,55 @@
       object-fit: cover;
     }
 
-    @media (max-width: 600px) {
-      .box {
-        width: 90%;
-      }
+    .theme-control {
+      margin: 60px 0;
+      font-family: 'Calibri';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: inherit;
+    }
 
-      .video-wrapper {
-        width: 100%;
-      }
+    .theme-btn,
+    .theme-info {
+      cursor: pointer;
+      padding: 10px 20px;
+      background: #f0f0f0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
 
-      .logo-image {
-        height: 45px;
-      }
+    body.dark-mode {
+      background: #111;
+      color: #fff;
+    }
+
+    body.dark-mode .subtitle {
+      color: #ccc;
+    }
+
+    body.dark-mode .box {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    body.dark-mode .box:hover {
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
+    }
+
+    body.dark-mode .toolbar {
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    }
+
+    body.dark-mode .theme-btn,
+    body.dark-mode .theme-info {
+      background: #333;
+      color: #fff;
     }
   </style>
 </head>
@@ -220,7 +267,7 @@
   </div>
 
   <div class="toolbar">
-    <img class="logo-image" src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom Logo" />
+    <div class="logo">newniom</div>
   </div>
 
   <div class="container">
@@ -230,7 +277,7 @@
     </div>
 
     <div class="boxes">
-      <a class="box main-channel" href="https://t.me/newniom" target="_blank">
+      <a class="box main-channel" href="https://t.me/newniom_main" target="_blank">
         <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" alt="Telegram" />
         <div class="box-text">
           <h3>Main channel</h3>
@@ -238,7 +285,7 @@
         </div>
       </a>
 
-      <a class="box sub-channel" href="https://t.me/newniom_soccer_news" target="_blank">
+      <a class="box sub-channel" href="https://t.me/newniom_soccer" target="_blank">
         <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" alt="Telegram" />
         <div class="box-text">
           <h3>Sub-channel</h3>
@@ -264,20 +311,38 @@
     </div>
 
     <div class="video-section">
-      <h2 style="margin-bottom: 20px; font-family: 'Source Sans 3'; color: #333;">First video of Newniom</h2>
+      <h2>first video of newniom</h2>
       <div class="video-wrapper">
-        <video
-          controls
-          playsinline
-          webkit-playsinline
-          preload="metadata"
-          poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg"
-        >
+        <video controls playsinline webkit-playsinline preload="metadata"
+          poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
           <source src="https://uploadkon.ir/uploads/85c022_25VID-20250622-171056-446.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
+
+    <div class="theme-control">
+      <span id="themeToggle" class="theme-btn">Switch to Dark Mode</span>
+      <div class="theme-info">terms of use</div>
+    </div>
   </div>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    let darkMode = localStorage.getItem('theme') === 'dark';
+
+    const applyTheme = () => {
+      document.body.classList.toggle('dark-mode', darkMode);
+      toggle.textContent = darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    };
+
+    toggle.addEventListener('click', () => {
+      darkMode = !darkMode;
+      localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+      applyTheme();
+    });
+
+    applyTheme();
+  </script>
 </body>
 </html>
