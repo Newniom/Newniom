@@ -9,16 +9,13 @@
       font-family: 'Forte';
       src: local('Forte'), url('Forte.woff') format('woff');
     }
-
     @font-face {
       font-family: 'Calibri';
       src: local('Calibri'), local('Calibri Body');
     }
-
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Calibri', sans-serif;
@@ -27,17 +24,14 @@
       overflow-x: hidden;
       transition: background 0.4s, color 0.4s;
     }
-
     .background {
       position: fixed;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       z-index: -1;
       overflow: hidden;
     }
-
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -45,39 +39,31 @@
       opacity: 0.6;
       animation: float 20s infinite linear;
     }
-
     .blob1 { width: 200px; height: 200px; background: purple; top: 10%; left: 5%; animation-delay: 0s; }
     .blob2 { width: 150px; height: 150px; background: #91ffc9; top: 15%; left: 70%; animation-delay: 4s; }
     .blob3 { width: 100px; height: 100px; background: #ffc91f; top: 60%; left: 15%; animation-delay: 8s; }
     .blob4 { width: 120px; height: 120px; background: #A24AE1; top: 70%; left: 85%; animation-delay: 2s; }
     .blob5 { width: 300px; height: 300px; background: #B8E3B0; top: 80%; left: -5%; animation-delay: 5s; }
     .blob6 { width: 100px; height: 100px; background: #62b3ff; top: 85%; left: 65%; animation-delay: 6s; }
-
     @keyframes float {
-      0%   { transform: translateY(0px) translateX(0px) scale(1); }
-      50%  { transform: translateY(-60px) translateX(40px) scale(1.1); }
+      0% { transform: translateY(0px) translateX(0px) scale(1); }
+      50% { transform: translateY(-60px) translateX(40px) scale(1.1); }
       100% { transform: translateY(0px) translateX(0px) scale(1); }
     }
 
     .toolbar {
       width: 100%;
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       z-index: 10;
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 15px 0;
+      padding: 10px 0;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
-    .toolbar .logo {
-      font-family: 'Forte', cursive;
-      font-size: 48px;
-      color: #7A23B9;
-      margin: 0;
+    .toolbar img.logo {
+      height: 60px;
     }
 
     .container {
@@ -88,13 +74,11 @@
       position: relative;
       z-index: 1;
     }
-
     .subtitle {
       font-size: 16px;
       line-height: 1.7;
       color: inherit;
     }
-
     .boxes {
       margin-top: 50px;
       display: flex;
@@ -102,67 +86,48 @@
       justify-content: center;
       gap: 20px;
     }
-
     .box {
       width: 280px;
       padding: 20px;
       border-radius: 20px;
       text-decoration: none;
       color: inherit;
-      font-family: 'Calibri', sans-serif;
       display: flex;
       align-items: center;
       gap: 15px;
       border: 1px solid rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .box:hover {
       transform: scale(1.06);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.95);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
     }
-
     .box img {
       width: 50px;
       height: 50px;
-      flex-shrink: 0;
     }
-
     .box-text {
       text-align: left;
     }
-
-    .box-text h3,
-    .box-text strong {
+    .box-text h3, .box-text strong {
       color: inherit;
-    }
-
-    .box-text h3 {
       margin: 0;
-      font-size: 14px;
     }
-
-    .box-text strong {
-      font-size: 16px;
-      display: block;
-    }
+    .box-text h3 { font-size: 14px; }
+    .box-text strong { font-size: 16px; display: block; }
 
     .main-channel {
       background: linear-gradient(135deg, rgba(236, 196, 233, 0.5), rgba(236, 196, 233, 0.35));
     }
-
     .sub-channel {
       background: linear-gradient(135deg, rgba(241, 203, 203, 0.5), rgba(241, 203, 203, 0.35));
     }
-
     .youtube {
       background: linear-gradient(135deg, rgba(195, 211, 242, 0.5), rgba(195, 211, 242, 0.35));
     }
-
     .instagram {
       background: linear-gradient(135deg,
         rgba(254, 218, 117, 0.35),
@@ -176,47 +141,35 @@
     .video-section {
       margin-top: 60px;
     }
-
     .video-section h2 {
-      margin-bottom: 20px;
       font-family: 'Calibri';
       font-size: 20px;
+      margin-bottom: 20px;
       color: inherit;
     }
-
     .video-wrapper {
       max-width: 800px;
       margin: auto;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
-
     .video-wrapper video {
       width: 100%;
-      max-height: 450px;
-      aspect-ratio: 16 / 9;
       border-radius: 20px;
       background-color: #000;
-      display: block;
       object-fit: cover;
     }
 
     .theme-control {
       margin: 60px 0;
-      font-family: 'Calibri';
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
-      color: inherit;
     }
-
-    .theme-btn,
-    .theme-info {
+    .theme-btn, .theme-info {
       cursor: pointer;
       padding: 10px 20px;
       background: #f0f0f0;
@@ -229,28 +182,18 @@
       background: #111;
       color: #fff;
     }
-
     body.dark-mode .subtitle {
       color: #ccc;
     }
-
     body.dark-mode .box {
       background: rgba(255, 255, 255, 0.08);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
-
-    body.dark-mode .box:hover {
-      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
-    }
-
     body.dark-mode .toolbar {
       background: rgba(0, 0, 0, 0.3);
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
     }
-
-    body.dark-mode .theme-btn,
-    body.dark-mode .theme-info {
+    body.dark-mode .theme-btn, body.dark-mode .theme-info {
       background: #333;
       color: #fff;
     }
@@ -258,16 +201,12 @@
 </head>
 <body>
   <div class="background">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
-    <div class="blob blob4"></div>
-    <div class="blob blob5"></div>
-    <div class="blob blob6"></div>
+    <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
+    <div class="blob blob4"></div><div class="blob blob5"></div><div class="blob blob6"></div>
   </div>
 
   <div class="toolbar">
-    <div class="logo">newniom</div>
+    <img class="logo" src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom Logo">
   </div>
 
   <div class="container">
@@ -278,43 +217,27 @@
 
     <div class="boxes">
       <a class="box main-channel" href="https://t.me/newniom_main" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" alt="Telegram" />
-        <div class="box-text">
-          <h3>Main channel</h3>
-          <strong>Newniom notifi’s</strong>
-        </div>
+        <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" />
+        <div class="box-text"><h3>Main channel</h3><strong>Newniom notifi’s</strong></div>
       </a>
-
       <a class="box sub-channel" href="https://t.me/newniom_soccer" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" alt="Telegram" />
-        <div class="box-text">
-          <h3>Sub-channel</h3>
-          <strong>Soccer news</strong>
-        </div>
+        <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" />
+        <div class="box-text"><h3>Sub-channel</h3><strong>Soccer news</strong></div>
       </a>
-
       <a class="box instagram" href="https://instagram.com/newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/v832886_ins2.png" alt="Instagram" />
-        <div class="box-text">
-          <h3>&nbsp;</h3>
-          <strong>Short-form videos</strong>
-        </div>
+        <img src="https://cdn.imgurl.ir/uploads/v832886_ins2.png" />
+        <div class="box-text"><h3>&nbsp;</h3><strong>Short-form videos</strong></div>
       </a>
-
       <a class="box youtube" href="https://youtube.com/@newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/h194435_ou2.png" alt="YouTube" />
-        <div class="box-text">
-          <h3>newniom</h3>
-          <strong>Educational videos</strong>
-        </div>
+        <img src="https://cdn.imgurl.ir/uploads/h194435_ou2.png" />
+        <div class="box-text"><h3>newniom</h3><strong>Educational videos</strong></div>
       </a>
     </div>
 
     <div class="video-section">
       <h2>first video of newniom</h2>
       <div class="video-wrapper">
-        <video controls playsinline webkit-playsinline preload="metadata"
-          poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
+        <video controls playsinline poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
           <source src="https://uploadkon.ir/uploads/85c022_25VID-20250622-171056-446.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -330,18 +253,15 @@
   <script>
     const toggle = document.getElementById('themeToggle');
     let darkMode = localStorage.getItem('theme') === 'dark';
-
     const applyTheme = () => {
       document.body.classList.toggle('dark-mode', darkMode);
       toggle.textContent = darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     };
-
     toggle.addEventListener('click', () => {
       darkMode = !darkMode;
       localStorage.setItem('theme', darkMode ? 'dark' : 'light');
       applyTheme();
     });
-
     applyTheme();
   </script>
 </body>
