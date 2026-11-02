@@ -1,328 +1,753 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Newniom Links</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08070b">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <title>Newniom — Independent Digital Studio</title>
+  <meta name="description" content="Newniom (نیونیوم) is an independent digital studio building useful digital products, exploring technology and AI, and creating thoughtful media and learning experiences.">
+  <meta name="keywords" content="Newniom, NEWNIOM, نیونیوم, شرکت نیونیوم, استودیو نیونیوم, Newniom Studio, digital studio, digital products, technology, artificial intelligence, AI, digital media, NEWSNIOM, Canvas">
+  <meta name="author" content="Newniom">
+  <link rel="canonical" href="https://newniom.github.io/Newniom/">
+  <link rel="alternate" hreflang="en" href="https://newniom.github.io/Newniom/">
+  <link rel="alternate" hreflang="x-default" href="https://newniom.github.io/Newniom/">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="https://cdn.imgurl.ir/uploads/a692496_newniom.png">
+
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fa_IR">
+  <meta property="og:site_name" content="Newniom">
+  <meta property="og:title" content="Newniom — Independent Digital Studio">
+  <meta property="og:description" content="Digital products, technology, creative experiments and thoughtful media — built by Newniom.">
+  <meta property="og:url" content="https://newniom.github.io/Newniom/">
+  <meta property="og:image" content="https://newniom.github.io/Newniom/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Newniom — Independent Digital Studio">
+  <meta name="twitter:description" content="Digital products, technology, creative experiments and thoughtful media — built by Newniom.">
+  <meta name="twitter:image" content="https://newniom.github.io/Newniom/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://newniom.github.io/Newniom/#organization",
+        "name": "Newniom",
+        "alternateName": ["NEWNIOM", "نیونیوم", "استودیو نیونیوم"],
+        "description": "An independent digital studio focused on digital products, technology, AI, media and learning experiences.",
+        "url": "https://newniom.github.io/Newniom/",
+        "logo": "https://cdn.imgurl.ir/uploads/a692496_newniom.png",
+        "email": "Newniom.com@gmail.com",
+        "sameAs": [
+          "https://t.me/newniom_main",
+          "https://t.me/newniom_soccer",
+          "https://instagram.com/newniom",
+          "https://youtube.com/@newniom"
+        ],
+        "brand": {"@type": "Brand", "name": "Newniom"}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://newniom.github.io/Newniom/#website",
+        "url": "https://newniom.github.io/Newniom/",
+        "name": "Newniom",
+        "alternateName": "نیونیوم",
+        "inLanguage": "en",
+        "publisher": {"@id": "https://newniom.github.io/Newniom/#organization"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://newniom.github.io/Newniom/#webpage",
+        "url": "https://newniom.github.io/Newniom/",
+        "name": "Newniom — Independent Digital Studio",
+        "description": "The official website of Newniom, an independent digital studio.",
+        "inLanguage": "en",
+        "isPartOf": {"@id": "https://newniom.github.io/Newniom/#website"},
+        "about": {"@id": "https://newniom.github.io/Newniom/#organization"}
+      }
+    ]
+  }
+  </script>
+
   <style>
-    @font-face {
-      font-family: 'Forte';
-      src: local('Forte'), url('Forte.woff') format('woff');
+    :root {
+      --accent: #7030A0;
+      --accent-light: #b58bd3;
+      --accent-soft: rgba(112, 48, 160, .16);
+      --text: #f5f2f7;
+      --muted: #c4bdca;
+      --muted-2: #96909d;
+      --card: rgba(18, 17, 21, .68);
+      --card-strong: rgba(13, 12, 16, .88);
+      --line: rgba(255, 255, 255, .105);
+      --line-strong: rgba(255, 255, 255, .16);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --content: 1180px;
+      --shadow: 0 18px 54px rgba(0, 0, 0, .34);
     }
-    @font-face {
-      font-family: 'Calibri';
-      src: local('Calibri'), local('Calibri Body');
-    }
-    * {
-      box-sizing: border-box;
-    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 112px; }
     body {
+      min-width: 320px;
       margin: 0;
-      font-family: 'Calibri', sans-serif;
-      background: #ffffff;
-      color: #333;
+      color: var(--text);
+      background: #08070b;
+      font-family: Inter, "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
       overflow-x: hidden;
-      transition: background 0.4s, color 0.4s;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg, iframe, video { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #c49be0; outline-offset: 4px; }
+    ::selection { background: rgba(112, 48, 160, .48); color: #fff; }
+
+    .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .icon { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+    .icon-sm { width: 17px; height: 17px; }
+    .icon-lg { width: 27px; height: 27px; }
 
     .background {
       position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      overflow: hidden;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: #09070d url("https://cdn.imgurl.ir/uploads/u635923_IMG_20260822_231152.jpg") center / cover no-repeat;
     }
-
-    .blob {
+    .background::before {
+      content: "";
       position: absolute;
-      border-radius: 50%;
-      filter: blur(50px);
-      opacity: 0.6;
-      animation: float 20s infinite linear;
+      inset: 0;
+      background: rgba(0, 0, 0, .62);
     }
-    .blob1 { width: 200px; height: 200px; background: purple; top: 10%; left: 5%; animation-delay: 0s; }
-    .blob2 { width: 150px; height: 150px; background: #91ffc9; top: 15%; left: 70%; animation-delay: 4s; }
-    .blob3 { width: 100px; height: 100px; background: #ffc91f; top: 60%; left: 15%; animation-delay: 8s; }
-    .blob4 { width: 120px; height: 120px; background: #A24AE1; top: 70%; left: 85%; animation-delay: 2s; }
-    .blob5 { width: 300px; height: 300px; background: #B8E3B0; top: 80%; left: -5%; animation-delay: 5s; }
-    .blob6 { width: 100px; height: 100px; background: #62b3ff; top: 85%; left: 65%; animation-delay: 6s; }
-
-    @keyframes float {
-      0%   { transform: translateY(0px) translateX(0px) scale(1); }
-      50%  { transform: translateY(-60px) translateX(40px) scale(1.1); }
-      100% { transform: translateY(0px) translateX(0px) scale(1); }
+    .background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.45));
     }
 
-    .toolbar {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(20px);
-      padding: 12px 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .container { width: min(var(--content), calc(100% - 56px)); margin-inline: auto; }
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      -webkit-backdrop-filter: blur(22px) saturate(135%);
+      backdrop-filter: blur(22px) saturate(135%);
+    }
+    .section { margin-top: clamp(72px, 9vw, 116px); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 0 2px 24px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #d2b5e7;
+      font-size: .73rem;
+      font-weight: 650;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 19px; height: 1px; background: var(--accent-light); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.16; letter-spacing: -.035em; }
+    .section-title { margin: 10px 0 0; font-size: clamp(1.9rem, 3.6vw, 3rem); font-weight: 620; }
+    .section-subtitle { max-width: 560px; margin: 12px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; color: #d9b9ef; font-size: .9rem; font-weight: 600; transition: color .18s ease; }
+    .text-link:hover { color: #fff; }
+
+    /* Header */
+    .site-header { position: sticky; top: 12px; z-index: 30; padding-top: 12px; }
+    .header-bar {
+      min-height: 72px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      gap: 26px;
+      padding: 10px 15px 10px 19px;
+      border-radius: 23px;
+      background: rgba(12, 11, 15, .76);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 34px rgba(0,0,0,.24);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
+      backdrop-filter: blur(24px) saturate(145%);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-logo { width: 43px; height: 43px; object-fit: contain; border-radius: 12px; background: rgba(255,255,255,.045) url('./favicon.svg') center / cover no-repeat; }
+    .brand-fallback { display: none; width: 43px; height: 43px; align-items: center; justify-content: center; border: 1px solid rgba(181,139,211,.35); border-radius: 12px; color: #d4b5e9; font-size: 1.35rem; font-weight: 700; }
+    .brand-word { display: grid; gap: 1px; line-height: 1.12; }
+    .brand-name { font-size: 1.03rem; font-weight: 760; letter-spacing: .16em; }
+    .brand-caption { color: var(--muted-2); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 5px; }
+    .nav-links a { padding: 10px 13px; color: #d0cad5; font-size: .87rem; border-radius: 12px; transition: color .18s ease, background .18s ease; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.055); }
+    .header-contact, .button {
+      display: inline-flex;
       align-items: center;
-    }
-
-    .logo img {
-      height: 38px;
-    }
-
-    .theme-toggle {
-      position: relative;
-      width: 42px;
-      height: 22px;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      cursor: pointer;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .theme-toggle input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .theme-toggle .toggle-thumb {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      transition: 0.4s ease;
-      background-image: url('https://biaupload.com/do.php?imgf=org-235f16c2882e1.png');
-      background-size: 75%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #fff;
-    }
-
-    .theme-toggle input:checked + .toggle-thumb {
-      transform: translateX(20px);
-      background-color: #333;
-      background-image: url('https://biaupload.com/do.php?imgf=org-145450341b2a1.png');
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 100px auto 60px;
-      padding: 0 20px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      line-height: 1.7;
-      color: inherit;
-    }
-
-    .boxes {
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 9px;
+      min-height: 44px;
+      padding: 10px 17px;
+      border: 1px solid rgba(181,139,211,.35);
+      border-radius: 13px;
+      background: #7030A0;
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 650;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+      cursor: pointer;
     }
+    .header-contact:hover, .button:hover { background: #8240b4; border-color: rgba(210,181,231,.65); transform: translateY(-1px); }
+    .button-secondary { background: rgba(255,255,255,.055); border-color: var(--line-strong); color: #f3edf7; }
+    .button-secondary:hover { background: rgba(255,255,255,.10); }
+    .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.045); color: white; cursor: pointer; }
 
-    .box {
-      width: 280px;
-      padding: 20px;
-      border-radius: 20px;
-      text-decoration: none;
-      color: inherit;
-      font-family: 'Calibri', sans-serif;
-      display: flex;
+    main { position: relative; z-index: 1; padding: 34px 0 64px; }
+    /* Hero */
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(270px, .78fr);
       align-items: center;
-      gap: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .box:hover {
-      transform: scale(1.06);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.95);
-    }
-
-    .box img {
-      width: 50px;
-      height: 50px;
-    }
-
-    .box-text h3 {
-      margin: 0;
-      font-size: 14px;
-      text-align:  left;
-    }
-
-    .box-text strong {
-      font-size: 16px;
-      display: block;
-    }
-
-    .main-channel {
-      background: linear-gradient(135deg, rgba(236, 196, 233, 0.5), rgba(236, 196, 233, 0.35));
-    }
-
-    .sub-channel {
-      background: linear-gradient(135deg, rgba(241, 203, 203, 0.5), rgba(241, 203, 203, 0.35));
-    }
-
-    .youtube {
-      background: linear-gradient(135deg, rgba(195, 211, 242, 0.5), rgba(195, 211, 242, 0.35));
-    }
-
-    .instagram {
-      background: linear-gradient(135deg,
-        rgba(254, 218, 117, 0.35),
-        rgba(250, 126, 30, 0.35),
-        rgba(214, 41, 118, 0.35),
-        rgba(150, 47, 191, 0.35),
-        rgba(79, 91, 213, 0.35));
-      color: white;
-    }
-
-    .video-section {
-      margin-top: 60px;
-    }
-
-    .video-section h2 {
-      margin-bottom: 20px;
-      font-family: 'Calibri';
-      font-size: 20px;
-      color: inherit;
-    }
-
-    .video-wrapper {
-      max-width: 800px;
-      margin: auto;
-      border-radius: 20px;
+      gap: clamp(30px, 5vw, 70px);
+      min-height: 470px;
+      padding: clamp(34px, 5.7vw, 76px);
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero h1 { max-width: 760px; margin: 17px 0 20px; font-size: clamp(2.9rem, 6.5vw, 5.55rem); font-weight: 640; letter-spacing: -.065em; line-height: 1.02; }
+    .hero h1 span { color: #c6a3df; }
+    .hero-description { max-width: 620px; margin: 0; color: #d0cbd4; font-size: clamp(1rem, 1.35vw, 1.12rem); line-height: 1.9; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 30px; }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 31px; color: var(--muted-2); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+    .hero-note::before { content: ""; width: 26px; height: 1px; background: rgba(181,139,211,.75); }
+    .hero-identity {
+      position: relative;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 25px;
+      background: rgba(8,7,10,.38);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     }
+    .hero-identity::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(181,139,211,.12); border-radius: 18px; pointer-events: none; }
+    .hero-identity img { width: min(58%, 176px); max-height: 156px; object-fit: contain; position: relative; }
+    .hero-mark-fallback { display: block; color: #c6a3df; font-size: 6.8rem; font-weight: 650; line-height: .9; letter-spacing: -.12em; }
+    .identity-rule { width: 46px; height: 1px; background: var(--accent-light); }
+    .identity-caption { position: relative; color: #c8c0ce; font-size: .72rem; letter-spacing: .18em; text-align: center; text-transform: uppercase; }
+    .hero-bottomline { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 18px; padding: 0 5px; color: rgba(236,230,241,.55); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
 
-    .video-wrapper video {
-      width: 100%;
-      max-height: 450px;
-      border-radius: 20px;
-      object-fit: cover;
-      background-color: #000;
+    /* Capabilities */
+    .capability-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .capability-card { min-height: 234px; padding: 25px 23px 24px; transition: border-color .18s ease, background .18s ease; }
+    .capability-card:hover { border-color: rgba(181,139,211,.32); background: rgba(21,18,25,.78); }
+    .capability-icon { display: flex; width: 46px; height: 46px; align-items: center; justify-content: center; margin-bottom: 28px; border: 1px solid rgba(181,139,211,.25); border-radius: 14px; color: #d0b0e6; background: rgba(112,48,160,.13); }
+    .capability-card h3 { margin: 0 0 10px; font-size: 1.08rem; font-weight: 650; letter-spacing: -.02em; }
+    .capability-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.8; }
+
+    /* Work / initiatives */
+    .initiative-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 15px; }
+    .initiative-card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 288px; padding: clamp(25px, 3.2vw, 38px); overflow: hidden; }
+    .initiative-card::after { content: ""; position: absolute; right: -68px; bottom: -110px; width: 250px; height: 250px; border: 1px solid rgba(181,139,211,.12); border-radius: 50%; pointer-events: none; }
+    .initiative-card > * { position: relative; z-index: 1; }
+    .initiative-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .initiative-label { color: #c6a3df; font-size: .71rem; letter-spacing: .13em; text-transform: uppercase; }
+    .initiative-mark { color: rgba(212,181,233,.85); }
+    .initiative-card h3 { max-width: 520px; margin: 30px 0 12px; font-size: clamp(1.65rem, 3vw, 2.5rem); font-weight: 630; }
+    .initiative-card p { max-width: 530px; margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.85; }
+    .initiative-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.09); color: var(--muted-2); font-size: .76rem; }
+    .status-label { display: inline-flex; align-items: center; gap: 8px; }
+    .status-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #a58bba; }
+
+    /* NEWSNIOM podcast */
+    .podcast-feature { position: relative; padding: clamp(26px, 4.6vw, 54px); overflow: hidden; }
+    .podcast-intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px; margin-bottom: 30px; }
+    .podcast-kicker { color: #c9a9df; font-size: .72rem; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; }
+    .podcast-intro h2 { margin: 10px 0 10px; font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 640; }
+    .podcast-intro p { max-width: 660px; margin: 0; color: var(--muted); font-size: .97rem; line-height: 1.85; }
+    .podcast-brand-note { display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid rgba(181,139,211,.22); border-radius: 13px; color: #dfd1e9; background: rgba(112,48,160,.10); white-space: nowrap; font-size: .79rem; }
+    .episode-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .episode-card { padding: 12px; border: 1px solid rgba(255,255,255,.10); border-radius: 21px; background: rgba(0,0,0,.24); }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 14px; background: #08070b; }
+    .video-frame > img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .episode-card:hover .video-frame > img { transform: scale(1.025); }
+    .play-button { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; height: 100%; border: 0; background: rgba(0,0,0,.14); color: white; cursor: pointer; }
+    .play-disc { display: grid; place-items: center; width: 62px; height: 62px; padding-left: 3px; border: 1px solid rgba(255,255,255,.68); border-radius: 50%; background: rgba(12,10,15,.64); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: background .18s ease, transform .18s ease; }
+    .play-button:hover .play-disc { background: #7030A0; transform: scale(1.05); }
+    .play-disc .icon { width: 23px; height: 23px; }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; }
+    .episode-info { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 8px 4px; }
+    .episode-index { color: #c7a6dc; font-size: .69rem; letter-spacing: .13em; text-transform: uppercase; }
+    .episode-type { color: var(--muted-2); font-size: .72rem; }
+    .episode-title { margin: 7px 8px 6px; font-size: 1.06rem; font-weight: 630; }
+    .episode-description { margin: 0 8px 12px; color: var(--muted-2); font-size: .8rem; }
+    .episode-link { display: inline-flex; align-items: center; gap: 8px; margin: 0 8px 8px; color: #d3b5e6; font-size: .8rem; font-weight: 600; }
+    .episode-link:hover { color: #fff; }
+
+    /* About */
+    .about-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 36px; align-items: start; }
+    .about-heading h2 { margin: 12px 0 0; font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 640; }
+    .about-copy { padding: 4px 0 0; }
+    .about-copy p { max-width: 700px; margin: 0 0 18px; color: #d0cad5; font-size: 1rem; line-height: 1.95; }
+    .principles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 26px; }
+    .principle { padding: 17px 16px; border-top: 1px solid rgba(181,139,211,.42); background: rgba(255,255,255,.025); }
+    .principle strong { display: block; margin-bottom: 5px; font-size: .88rem; font-weight: 630; }
+    .principle span { color: var(--muted-2); font-size: .77rem; line-height: 1.65; }
+
+    /* Community / contact */
+    .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .connect-card { display: flex; align-items: center; gap: 16px; min-height: 98px; padding: 18px 20px; border-radius: 19px; border: 1px solid var(--line); background: rgba(17,16,20,.63); transition: border-color .18s ease, background .18s ease; }
+    .connect-card:hover { border-color: rgba(181,139,211,.38); background: rgba(24,20,29,.78); }
+    .connect-icon { display: grid; place-items: center; width: 47px; height: 47px; border-radius: 14px; border: 1px solid rgba(181,139,211,.24); color: #d5b7e9; background: rgba(112,48,160,.12); }
+    .connect-copy { display: grid; gap: 3px; flex: 1; min-width: 0; }
+    .connect-copy strong { font-size: .9rem; font-weight: 630; }
+    .connect-copy span { color: var(--muted-2); font-size: .76rem; overflow-wrap: anywhere; }
+    .connect-arrow { color: var(--muted-2); }
+    .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 18px; padding: clamp(24px, 3.4vw, 38px); }
+    .contact-panel h3 { margin: 0 0 8px; font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 630; }
+    .contact-panel p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    /* Footer */
+    .studio-film { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: clamp(24px, 4vw, 48px); padding: clamp(24px, 4vw, 42px); }
+    .studio-film h2 { margin: 12px 0 12px; font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 630; }
+    .studio-film p { max-width: 390px; margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.85; }
+    .studio-film-frame { overflow: hidden; border: 1px solid rgba(255,255,255,.10); border-radius: 17px; background: #050407; }
+    .studio-film-frame video { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
+    .site-footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; margin-top: 88px; padding: 24px 4px 0; border-top: 1px solid rgba(255,255,255,.10); }
+    .footer-brand { display: inline-flex; align-items: center; gap: 11px; font-size: .89rem; font-weight: 730; letter-spacing: .13em; }
+    .footer-brand .icon { color: #c9a9df; }
+    .footer-meta { color: var(--muted-2); font-size: .76rem; text-align: right; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 9px; }
+    .footer-links a { color: var(--muted); transition: color .18s ease; }
+    .footer-links a:hover { color: #fff; }
+    .back-to-top { position: fixed; right: 24px; bottom: 24px; z-index: 15; display: grid; place-items: center; width: 45px; height: 45px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(14,12,17,.86); color: #e9ddf1; box-shadow: 0 8px 24px rgba(0,0,0,.28); opacity: 0; visibility: hidden; transition: opacity .18s ease, visibility .18s ease; }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .skip-link { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 10px 14px; border-radius: 10px; background: #7030A0; color: white; }
+    .skip-link:focus { top: 12px; }
+
+    @media (max-width: 980px) {
+      .capability-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .hero { grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr); }
+      .about-layout { grid-template-columns: 1fr 1.3fr; gap: 25px; }
     }
-
-    body.dark-mode {
-      background: #111;
-      color: #fff;
+    @media (max-width: 920px) {
+      .header-contact { display: none; }
+      .menu-toggle { display: flex; }
+      .nav-links {
+        position: absolute; top: calc(100% + 9px); left: 0; right: 0;
+        display: none; flex-direction: column; align-items: stretch; gap: 3px;
+        padding: 9px; border: 1px solid var(--line); border-radius: 18px;
+        background: rgba(12,11,15,.96); box-shadow: var(--shadow);
+        -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 13px; }
     }
-
-    body.dark-mode .box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, 620px); }
+      .header-bar { min-height: 66px; padding: 9px 11px 9px 14px; }
+      .brand-logo, .brand-fallback { width: 39px; height: 39px; }
+      main { padding-top: 22px; }
+      .hero { grid-template-columns: 1fr; gap: 30px; min-height: 0; padding: 34px 27px; }
+      .hero h1 { max-width: 600px; font-size: clamp(2.65rem, 10vw, 4.2rem); }
+      .hero-identity { min-height: 205px; }
+      .hero-identity img { width: 112px; max-height: 96px; }
+      .hero-bottomline { font-size: .62rem; letter-spacing: .08em; }
+      .section { margin-top: 72px; }
+      .initiative-grid { grid-template-columns: 1fr; }
+      .initiative-card { min-height: 260px; }
+      .podcast-intro { grid-template-columns: 1fr; align-items: start; }
+      .podcast-brand-note { width: fit-content; }
+      .about-layout { grid-template-columns: 1fr; gap: 20px; }
+      .studio-film { grid-template-columns: 1fr; }
+      .connect-grid { grid-template-columns: 1fr; }
+      .contact-panel { align-items: flex-start; flex-direction: column; }
+      .site-footer { grid-template-columns: 1fr; }
+      .footer-meta { text-align: left; }
     }
-
-    body.dark-mode .toolbar {
-      background: rgba(0, 0, 0, 0.3);
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 26px); }
+      .brand-caption { font-size: .61rem; }
+      .hero { padding: 29px 21px; border-radius: 25px; }
+      .hero h1 { font-size: clamp(2.45rem, 12vw, 3.55rem); }
+      .hero-description { font-size: .95rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .button { width: 100%; }
+      .hero-note { font-size: .66rem; letter-spacing: .04em; }
+      .hero-bottomline { align-items: flex-start; flex-direction: column; gap: 5px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 11px; }
+      .capability-grid { grid-template-columns: 1fr; gap: 10px; }
+      .capability-card { display: grid; grid-template-columns: 43px 1fr; align-items: start; column-gap: 15px; min-height: 0; padding: 19px; }
+      .capability-icon { grid-row: span 2; width: 43px; height: 43px; margin: 0; }
+      .capability-card h3 { margin: 1px 0 5px; }
+      .capability-card p { grid-column: 2; }
+      .initiative-card { min-height: 246px; padding: 23px; }
+      .podcast-feature { padding: 20px 15px; border-radius: 25px; }
+      .episode-grid { grid-template-columns: 1fr; gap: 13px; }
+      .episode-card { padding: 9px; }
+      .play-disc { width: 54px; height: 54px; }
+      .principles { grid-template-columns: 1fr; gap: 8px; }
+      .principle { padding: 13px 15px; }
+      .contact-panel { padding: 23px 19px; }
+      .footer-links { gap: 13px; }
+      .back-to-top { right: 13px; bottom: 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
   </style>
 </head>
 <body>
-  <div class="background">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
-    <div class="blob blob4"></div>
-    <div class="blob blob5"></div>
-    <div class="blob blob6"></div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="background" aria-hidden="true"></div>
 
-  <div class="toolbar">
-    <div class="logo">
-      <img src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom Logo">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 8 9 5 9-5M3 8v9l9 5 9-5V8M12 13v9"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 6 10 6-10 6V6Z"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 20 9-9-8-8-9 9-1 8 9-1Z"/><path d="m13 4 7 7M4 16l4 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22V5.5Z"/><path d="M4 18a2.5 2.5 0 0 1 2.5-2.5H20M8 7h8M8 10h7"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M22 12s0-3.1-.4-4.6a2.9 2.9 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.4a2.9 2.9 0 0 0-2 2C2 8.9 2 12 2 12s0 3.1.4 4.6a2.9 2.9 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.4a2.9 2.9 0 0 0 2-2C22 15.1 22 12 22 12Z"/><path d="m10 9 5 3-5 3V9Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="m21 3-7.3 18-4.2-7.2L2 10.2 21 3Z"/><path d="m9.5 13.8 5.4-5.1"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-soccer" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 7 3 2-1 4h-4l-1-4 3-2ZM9 13l-3 2M14 13l3 2M8 5l1 4M16 5l-1 4M9 19l1-6M15 19l-1-6"/></symbol>
+  </svg>
+
+  <header class="site-header container">
+    <div class="header-bar">
+      <a class="brand" href="#home" aria-label="Newniom home">
+        <img class="brand-logo" src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom (نیونیوم) logo" width="43" height="43" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="brand-fallback" aria-hidden="true">N</span>
+        <span class="brand-word">
+          <span class="brand-name">NEWNIOM</span>
+          <span class="brand-caption">Independent digital studio</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="siteNav" aria-label="Main navigation">
+        <a href="#studio">Studio</a>
+        <a href="#capabilities">What we do</a>
+        <a href="#work">Initiatives</a>
+        <a href="#newsniom">NEWSNIOM</a>
+        <a href="#connect">Connect</a>
+      </nav>
+
+      <a class="header-contact" href="mailto:Newniom.com@gmail.com">Get in touch <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
     </div>
-    <label class="theme-toggle">
-      <input type="checkbox" id="themeToggle">
-      <span class="toggle-thumb"></span>
-    </label>
-  </div>
+  </header>
 
-  <div class="container">
-    <div class="subtitle">
-      You will no longer miss the most important events of the technology<br>
-      Excited to announce that we’re going to be a good resource for IT professionals
-    </div>
+  <main class="container" id="main">
+    <section class="hero glass" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">An independent digital studio</span>
+        <h1 id="hero-title">Ideas into<br><span>experiences.</span></h1>
+        <p class="hero-description">Newniom explores technology, builds practical digital products and creates thoughtful media and learning experiences. One independent studio, bringing useful ideas to life.</p>
+        <div class="hero-actions">
+          <a class="button" href="#capabilities">Explore the studio <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="button button-secondary" href="mailto:Newniom.com@gmail.com">Start a conversation <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+        <div class="hero-note">Technology · Creativity · Practical thinking</div>
+      </div>
+      <div class="hero-identity" aria-label="Newniom brand identity">
+        <img src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom" width="176" height="156" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'">
+        <span class="hero-mark-fallback" aria-hidden="true">N</span>
+        <span class="identity-rule" aria-hidden="true"></span>
+        <span class="identity-caption">A space for ideas to become real</span>
+      </div>
+    </section>
+    <div class="hero-bottomline" aria-hidden="true"><span>Independent by nature</span><span>Built with intention</span><span>Based in the digital world</span></div>
 
-    <div class="boxes">
-      <a class="box main-channel" href="https://t.me/newniom_main" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t68155_mchannel2.png" alt="Telegram" />
-        <div class="box-text">
-          <h3>Main channel</h3>
-          <strong>Newniom notifi’s</strong>
+    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2 class="section-title" id="capabilities-title">A studio built around ideas.</h2>
+          <p class="section-subtitle">Newniom brings together product thinking, technology, media and education — with usefulness at the centre of every project.</p>
         </div>
-      </a>
-      <a class="box sub-channel" href="https://t.me/newniom_soccer" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/t196495_s.png" alt="Telegram" />
-        <div class="box-text">
-          <h3>Sub-channel</h3>
-          <strong>Soccer news</strong>
-        </div>
-      </a>
-      <a class="box instagram" href="https://instagram.com/newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/v832886_ins2.png" alt="Instagram" />
-        <div class="box-text">
-          <h3>&nbsp;</h3>
-          <strong>Short-form videos</strong>
-        </div>
-      </a>
-      <a class="box youtube" href="https://youtube.com/@newniom" target="_blank">
-        <img src="https://cdn.imgurl.ir/uploads/h194435_ou2.png" alt="YouTube" />
-        <div class="box-text">
-          <h3>newniom</h3>
-          <strong>Educational videos</strong>
-        </div>
-      </a>
-    </div>
+      </div>
 
-    <div class="video-section">
-      <h2>first video of newniom</h2>
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata"
-          poster="https://biaupload.com/do.php?imgf=org-3723a70e97e41.jpg">
+      <div class="capability-grid">
+        <article class="capability-card glass">
+          <div class="capability-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-cube"/></svg></div>
+          <h3>Digital products</h3>
+          <p>Useful digital experiences, lightweight tools and products shaped around real needs.</p>
+        </article>
+        <article class="capability-card glass">
+          <div class="capability-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-cpu"/></svg></div>
+          <h3>Technology &amp; AI</h3>
+          <p>Exploring emerging technology and turning complex ideas into clear, practical insight.</p>
+        </article>
+        <article class="capability-card glass">
+          <div class="capability-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-pen"/></svg></div>
+          <h3>Media &amp; storytelling</h3>
+          <p>Editorial content, video and audio formats that make ideas easier to discover and understand.</p>
+        </article>
+        <article class="capability-card glass">
+          <div class="capability-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-book"/></svg></div>
+          <h3>Learning &amp; resources</h3>
+          <p>Accessible guides and learning experiences for people who want to create and understand more.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Selected initiatives</span>
+          <h2 class="section-title" id="work-title">Different ideas. One studio.</h2>
+          <p class="section-subtitle">A growing ecosystem of independent projects, creative tools and media experiences.</p>
+        </div>
+      </div>
+
+      <div class="initiative-grid">
+        <article class="initiative-card glass">
+          <div class="initiative-top">
+            <span class="initiative-label">Creative workspace</span>
+            <svg class="icon icon-lg initiative-mark" aria-hidden="true"><use href="#i-cube"/></svg>
+          </div>
+          <div>
+            <h3>Canvas</h3>
+            <p>A visual workspace concept for digital creators — bringing ideas, assets and creative work into one focused space.</p>
+          </div>
+          <div class="initiative-footer"><span>Digital product by Newniom</span><span class="status-label">In development</span></div>
+        </article>
+
+        <article class="initiative-card glass">
+          <div class="initiative-top">
+            <span class="initiative-label">Technology &amp; media</span>
+            <svg class="icon icon-lg initiative-mark" aria-hidden="true"><use href="#i-mic"/></svg>
+          </div>
+          <div>
+            <h3>NEWSNIOM</h3>
+            <p>A technology and AI podcast exploring the stories, products and ideas shaping the digital world. One media project within the wider Newniom ecosystem.</p>
+          </div>
+          <div class="initiative-footer"><span>Podcast &amp; digital media</span><a class="text-link" href="#newsniom">Explore the podcast <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section podcast-feature glass" id="newsniom" aria-labelledby="podcast-title">
+      <div class="podcast-intro">
+        <div>
+          <span class="podcast-kicker">A Newniom media project</span>
+          <h2 id="podcast-title">NEWSNIOM Podcast</h2>
+          <p>Conversations with the latest in technology and artificial intelligence. Watch the latest video episodes below, or visit the NEWSNIOM channel for more.</p>
+        </div>
+        <a class="podcast-brand-note" href="https://youtube.com/@newniom" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg>
+          NEWSNIOM on YouTube
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+      </div>
+
+      <div class="episode-grid">
+        <article class="episode-card">
+          <div class="video-frame" style="background-image:url('./episode-01.svg');background-size:cover;background-position:center">
+            <img src="https://i.ytimg.com/vi/D6MAVtqkp0c/hqdefault.jpg" alt="NEWSNIOM podcast — episode 01 thumbnail" loading="lazy" decoding="async" width="480" height="360" onerror="this.style.display='none'">
+            <button class="play-button" type="button" data-youtube="D6MAVtqkp0c" aria-label="Play NEWSNIOM podcast episode 01">
+              <span class="play-disc"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span>
+            </button>
+          </div>
+          <div class="episode-info"><span class="episode-index">NEWSNIOM Podcast</span><span class="episode-type">Video episode</span></div>
+          <h3 class="episode-title">Episode 01</h3>
+          <p class="episode-description">Select play to watch the full episode here.</p>
+          <a class="episode-link" href="https://youtu.be/D6MAVtqkp0c" target="_blank" rel="noopener noreferrer">Watch on YouTube <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </article>
+
+        <article class="episode-card">
+          <div class="video-frame" style="background-image:url('./episode-02.svg');background-size:cover;background-position:center">
+            <img src="https://i.ytimg.com/vi/vsOzIV3vKx0/hqdefault.jpg" alt="NEWSNIOM podcast — episode 02 thumbnail" loading="lazy" decoding="async" width="480" height="360" onerror="this.style.display='none'">
+            <button class="play-button" type="button" data-youtube="vsOzIV3vKx0" aria-label="Play NEWSNIOM podcast episode 02">
+              <span class="play-disc"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span>
+            </button>
+          </div>
+          <div class="episode-info"><span class="episode-index">NEWSNIOM Podcast</span><span class="episode-type">Video episode</span></div>
+          <h3 class="episode-title">Episode 02</h3>
+          <p class="episode-description">Select play to watch the full episode here.</p>
+          <a class="episode-link" href="https://youtu.be/vsOzIV3vKx0" target="_blank" rel="noopener noreferrer">Watch on YouTube <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="studio" aria-labelledby="studio-title">
+      <div class="about-layout">
+        <div class="about-heading">
+          <span class="eyebrow">The studio</span>
+          <h2 id="studio-title">Built with curiosity. Guided by purpose.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Newniom is an independent digital studio working across technology, creative development and digital media. It is a home for ideas that deserve to become something useful — from practical tools and experiments to educational content and original media projects.</p>
+          <p>Rather than being defined by a single product or channel, Newniom is an evolving ecosystem. Each project has its own identity, while sharing the same focus on clarity, thoughtful design and meaningful utility.</p>
+          <div class="principles">
+            <div class="principle"><strong>Useful by design</strong><span>Start with a real need. Keep the experience clear.</span></div>
+            <div class="principle"><strong>Curiosity first</strong><span>Explore ideas, test assumptions and keep learning.</span></div>
+            <div class="principle"><strong>Made with intent</strong><span>Care about the details, not just the launch.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section studio-film glass" aria-labelledby="studio-film-title">
+      <div>
+        <span class="eyebrow">Studio introduction</span>
+        <h2 id="studio-film-title">A closer look at Newniom.</h2>
+        <p>A short introduction to the studio, its identity and the ideas behind its work.</p>
+      </div>
+      <div class="studio-film-frame">
+        <video controls playsinline preload="none" poster="./studio-poster.svg">
           <source src="https://uploadkon.ir/uploads/85c022_25VID-20250622-171056-446.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          Your browser does not support HTML video.
         </video>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section class="section" id="connect" aria-labelledby="connect-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Stay connected</span>
+          <h2 class="section-title" id="connect-title">Follow the work.</h2>
+          <p class="section-subtitle">Explore Newniom across its channels and keep up with new projects, media and updates.</p>
+        </div>
+      </div>
+      <div class="connect-grid">
+        <a class="connect-card" href="https://youtube.com/@newniom" target="_blank" rel="noopener noreferrer">
+          <span class="connect-icon"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></span>
+          <span class="connect-copy"><strong>YouTube</strong><span>Videos, projects and NEWSNIOM episodes</span></span>
+          <svg class="icon connect-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+        <a class="connect-card" href="https://instagram.com/newniom" target="_blank" rel="noopener noreferrer">
+          <span class="connect-icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+          <span class="connect-copy"><strong>Instagram</strong><span>Updates and selected moments</span></span>
+          <svg class="icon connect-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+        <a class="connect-card" href="https://t.me/newniom_main" target="_blank" rel="noopener noreferrer">
+          <span class="connect-icon"><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg></span>
+          <span class="connect-copy"><strong>Telegram</strong><span>Newniom's main channel</span></span>
+          <svg class="icon connect-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+        <a class="connect-card" href="https://t.me/newniom_soccer" target="_blank" rel="noopener noreferrer">
+          <span class="connect-icon"><svg class="icon" aria-hidden="true"><use href="#i-soccer"/></svg></span>
+          <span class="connect-copy"><strong>Newniom Soccer News</strong><span>A separate football news channel</span></span>
+          <svg class="icon connect-arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
+      </div>
+
+      <div class="contact-panel glass">
+        <div>
+          <h3>Have an idea in mind?</h3>
+          <p>For collaborations, questions or just to say hello.</p>
+        </div>
+        <a class="button" href="mailto:Newniom.com@gmail.com"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg> Newniom.com@gmail.com <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#home"><span>NEWNIOM</span></a>
+      <div class="footer-meta">
+        <span>Independent digital studio</span>
+        <div class="footer-links"><a href="#studio">Studio</a><a href="#capabilities">What we do</a><a href="#newsniom">NEWSNIOM</a><a href="mailto:Newniom.com@gmail.com">Contact</a></div>
+        <div style="margin-top:12px">© <span id="year">2026</span> Newniom. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <a class="back-to-top" id="backToTop" href="#home" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+
+  <noscript>
+    <div style="position:fixed;bottom:12px;right:12px;left:12px;z-index:99;padding:12px 15px;background:#17121d;color:#fff;border:1px solid #7030A0;border-radius:13px;text-align:center">JavaScript is required for the mobile menu and embedded video player. You can still open each episode directly on YouTube.</div>
+  </noscript>
 
   <script>
-    const toggle = document.getElementById('themeToggle');
-    let darkMode = localStorage.getItem('theme') === 'dark';
-    const applyTheme = () => {
-      document.body.classList.toggle('dark-mode', darkMode);
-      toggle.checked = darkMode;
-    };
-    toggle.addEventListener('change', () => {
-      darkMode = toggle.checked;
-      localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-      applyTheme();
-    });
-    applyTheme();
+    (() => {
+      const menuToggle = document.getElementById('menuToggle');
+      const siteNav = document.getElementById('siteNav');
+      const backToTop = document.getElementById('backToTop');
+      const year = document.getElementById('year');
+
+      if (year) year.textContent = String(new Date().getFullYear());
+
+      const closeMenu = () => {
+        if (!menuToggle || !siteNav) return;
+        siteNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation');
+        menuToggle.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>';
+      };
+
+      if (menuToggle && siteNav) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = siteNav.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+          menuToggle.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#${isOpen ? 'i-close' : 'i-menu'}"/></svg>`;
+        });
+        siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && siteNav.classList.contains('open')) {
+            closeMenu();
+            menuToggle.focus();
+          }
+        });
+        document.addEventListener('click', event => {
+          if (siteNav.classList.contains('open') && !siteNav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+        });
+      }
+
+      document.querySelectorAll('[data-youtube]').forEach(button => {
+        button.addEventListener('click', () => {
+          const videoId = button.getAttribute('data-youtube');
+          if (!/^[a-zA-Z0-9_-]{11}$/.test(videoId || '')) return;
+          const frame = document.createElement('iframe');
+          frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1`;
+          frame.title = `NEWSNIOM podcast episode ${videoId === 'D6MAVtqkp0c' ? '01' : '02'}`;
+          frame.loading = 'lazy';
+          frame.referrerPolicy = 'strict-origin-when-cross-origin';
+          frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          frame.allowFullscreen = true;
+          frame.setAttribute('allowfullscreen', '');
+          const frameHost = button.parentElement;
+          frameHost.replaceChildren(frame);
+        }, { once: true });
+      });
+
+      if (backToTop) {
+        const updateBackToTop = () => backToTop.classList.toggle('visible', window.scrollY > 500);
+        window.addEventListener('scroll', updateBackToTop, { passive: true });
+        updateBackToTop();
+      }
+    })();
   </script>
 </body>
 </html>
