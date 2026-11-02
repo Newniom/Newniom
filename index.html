@@ -80,6 +80,93 @@
   </script>
 
   <style>
+    
+/* Main hero: text only */
+.hero {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 760px;
+}
+
+/* Canvas Pro section */
+.canvas-pro-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 36px;
+  margin-top: 28px;
+  padding: 36px;
+  overflow: hidden;
+}
+
+.canvas-pro-copy {
+  min-width: 0;
+}
+
+.canvas-pro-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #b69ad8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.canvas-pro-copy h2 {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+}
+
+.canvas-pro-copy p {
+  max-width: 420px;
+  color: var(--muted, #a5a5ad);
+  line-height: 1.9;
+}
+
+.canvas-pro-poster {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111;
+}
+
+.canvas-pro-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+@media (max-width: 760px) {
+  .canvas-pro-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .canvas-pro-copy h2 {
+    font-size: 32px;
+  }
+
+  .canvas-pro-poster {
+    width: 100%;
+  }
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 760px;
+}
+
     :root {
       --accent: #7030A0;
       --accent-light: #b58bd3;
@@ -444,14 +531,22 @@
 
   <header class="site-header container">
     <div class="header-bar">
-      <a class="brand" href="#home" aria-label="Newniom home">
-        <img class="brand-logo" src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom (نیونیوم) logo" width="43" height="43" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <span class="brand-fallback" aria-hidden="true">N</span>
-        <span class="brand-word">
-          <span class="brand-name">NEWNIOM</span>
-          <span class="brand-caption">Independent digital studio</span>
-        </span>
-      </a>
+      
+<a class="brand" href="#home" aria-label="Newniom home">
+  <img
+    class="brand-logo"
+    src="https://cdn.imgurl.ir/uploads/j779124_.png"
+    alt="Newniom Logo"
+    width="43"
+    height="43"
+    style="display:block; object-fit:contain;"
+  >
+
+  <span class="brand-word">
+    <span class="brand-name">NEWNIOM</span>
+    <span class="brand-caption">A new element of technology</span>
+  </span>
+</a>
 
       <nav class="nav-links" id="siteNav" aria-label="Main navigation">
         <a href="#studio">Studio</a>
@@ -471,7 +566,7 @@
   <main class="container" id="main">
     <section class="hero glass" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <span class="eyebrow">An independent digital studio</span>
+        <span class="eyebrow">A new element of technology</span>
         <h1 id="hero-title">Ideas into<br><span>experiences.</span></h1>
         <p class="hero-description">Newniom explores technology, builds practical digital products and creates thoughtful media and learning experiences. One independent studio, bringing useful ideas to life.</p>
         <div class="hero-actions">
@@ -480,13 +575,10 @@
         </div>
         <div class="hero-note">Technology · Creativity · Practical thinking</div>
       </div>
-      <div class="hero-identity" aria-label="Newniom brand identity">
-        <img src="https://cdn.imgurl.ir/uploads/a692496_newniom.png" alt="Newniom" width="176" height="156" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'">
-        <span class="hero-mark-fallback" aria-hidden="true">N</span>
-        <span class="identity-rule" aria-hidden="true"></span>
-        <span class="identity-caption">A space for ideas to become real</span>
+      
       </div>
     </section>
+    
     <div class="hero-bottomline" aria-hidden="true"><span>Independent by nature</span><span>Built with intention</span><span>Based in the digital world</span></div>
 
     <section class="section" id="capabilities" aria-labelledby="capabilities-title">
@@ -557,6 +649,25 @@
         </article>
       </div>
     </section>
+
+<section class="canvas-pro-section glass" id="canvas-pro">
+  <div class="canvas-pro-copy">
+    <span class="canvas-pro-label">NEWNIOM · CANVAS</span>
+    <h2>Canvas Pro</h2>
+    <p>
+      Take your creativity further with Canvas Pro.
+      Explore a more powerful creative experience by Newniom.
+    </p>
+  </div>
+
+  <div class="canvas-pro-poster">
+    <img
+      src="https://cdn.imgurl.ir/uploads/u692356_.jpg"
+      alt="Canvas Pro subscription poster by Newniom"
+      loading="lazy"
+    >
+  </div>
+</section>
 
     <section class="section podcast-feature glass" id="newsniom" aria-labelledby="podcast-title">
       <div class="podcast-intro">
