@@ -492,6 +492,114 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
+  /* ===== Compare (cmp-) ===== */
+.cmp-switch { display: inline-flex; padding: 3px; border: 1px solid var(--line-strong); border-radius: 13px; background: rgba(255,255,255,.045); }
+.cmp-switch button { min-width: 46px; min-height: 38px; padding: 6px 12px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); font-size: .82rem; font-weight: 650; cursor: pointer; transition: color .18s ease, background .18s ease; }
+.cmp-switch button:hover { color: #fff; background: rgba(255,255,255,.07); }
+.cmp-switch button[aria-pressed="true"] { background: #7030A0; color: #fff; }
+
+.cmp-identity { display: flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; margin: 0 2px 16px; padding: 12px 15px; border: 1px solid rgba(181,139,211,.22); border-radius: 13px; background: rgba(112,48,160,.10); color: #dfd1e9; font-size: .82rem; line-height: 1.6; }
+.cmp-identity .icon { color: var(--accent-light); }
+
+.cmp-form { padding: clamp(20px, 3vw, 32px); }
+.cmp-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.cmp-field { display: grid; gap: 7px; min-width: 0; }
+.cmp-label { color: var(--muted-2); font-size: .72rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
+.cmp-input { width: 100%; min-height: 48px; padding: 11px 14px; border: 1px solid var(--line-strong); border-radius: 13px; background: rgba(255,255,255,.05); color: var(--text); font: inherit; font-size: 1rem; transition: border-color .18s ease, background .18s ease; }
+.cmp-input::placeholder { color: var(--muted-2); }
+.cmp-input:hover { background: rgba(255,255,255,.07); }
+.cmp-input:focus-visible { border-color: var(--accent-light); background: rgba(255,255,255,.08); }
+.cmp-examples { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.cmp-examples-label { color: var(--muted-2); font-size: .78rem; }
+.cmp-chip { min-height: 38px; padding: 7px 13px; border: 1px solid var(--line-strong); border-radius: 12px; background: rgba(255,255,255,.045); color: #e6dded; font-size: .78rem; cursor: pointer; transition: background .18s ease, border-color .18s ease; }
+.cmp-chip:hover { background: rgba(255,255,255,.10); border-color: rgba(181,139,211,.4); }
+.cmp-actions { display: flex; justify-content: flex-end; margin-top: 18px; }
+.cmp-actions .button[disabled], .cmp-share[disabled] { opacity: .6; cursor: progress; transform: none; }
+
+#cmpResult { margin-top: 18px; scroll-margin-top: 112px; }
+.cmp-intro { margin: 0 2px 12px; color: var(--muted); font-size: .84rem; }
+.cmp-notice { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 12px; padding: 12px 15px; border: 1px solid rgba(181,139,211,.3); border-radius: 13px; background: rgba(112,48,160,.12); color: #e8dcf0; font-size: .84rem; line-height: 1.7; }
+.cmp-notice .icon { margin-top: 2px; color: var(--accent-light); }
+
+.cmp-heads { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.cmp-head { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 8px 14px; align-content: start; padding: 18px; border-radius: var(--radius-lg); }
+.cmp-media { display: grid; place-items: center; width: 84px; height: 84px; overflow: hidden; border-radius: 14px; background: rgba(255,255,255,.05); color: var(--accent-light); }
+.cmp-media img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.cmp-ph { width: 38px; height: 38px; }
+.cmp-tag-row { display: flex; align-items: center; gap: 8px; }
+.cmp-badge { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 7px; border: 1px solid rgba(181,139,211,.4); border-radius: 8px; color: #e0c8f0; font-size: .72rem; font-weight: 700; }
+.cmp-win-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 8px; background: #7030A0; color: #fff; font-size: .7rem; font-weight: 650; }
+.cmp-name { margin: 6px 0 2px; font-size: 1.05rem; font-weight: 650; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.cmp-meta { margin: 0; color: var(--muted-2); font-size: .78rem; }
+.cmp-price { display: inline-block; margin-top: 7px; padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 9px; color: #e6dded; font-size: .76rem; }
+.cmp-summary { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: .86rem; line-height: 1.75; }
+
+.cmp-panel { margin-top: 14px; padding: clamp(18px, 2.6vw, 26px); border-radius: var(--radius-lg); }
+.cmp-h { margin: 0 0 14px; color: #d2b5e7; font-size: .73rem; font-weight: 650; letter-spacing: .15em; text-transform: uppercase; }
+.cmp-legend { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 4px; color: var(--muted); font-size: .8rem; font-weight: 600; }
+.cmp-legend span { min-width: 0; overflow-wrap: anywhere; }
+.cmp-row { margin-top: 14px; }
+.cmp-row-label { margin-bottom: 6px; color: var(--muted-2); font-size: .78rem; text-align: center; }
+.cmp-bars { display: grid; grid-template-columns: 2.4em 1fr 1fr 2.4em; align-items: center; gap: 6px; }
+.cmp-num { color: var(--muted-2); font-size: .84rem; font-variant-numeric: tabular-nums; text-align: center; }
+.cmp-num.cmp-win { color: #fff; font-weight: 700; }
+.cmp-track { display: flex; height: 10px; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden; }
+.cmp-track-a { justify-content: flex-end; }
+.cmp-track-b { justify-content: flex-start; }
+.cmp-fill { width: 0; height: 100%; border-radius: 999px; background: rgba(255,255,255,.26); transition: width .6s ease; }
+.cmp-fill.cmp-win { background: var(--accent-light); }
+
+.cmp-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; -webkit-overflow-scrolling: touch; }
+.cmp-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: .84rem; }
+.cmp-table th, .cmp-table td { padding: 11px 13px; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.cmp-table thead th { color: #e6dded; font-weight: 650; background: rgba(255,255,255,.04); }
+.cmp-table tbody th { color: var(--muted-2); font-weight: 600; white-space: nowrap; }
+.cmp-table tbody tr:last-child th, .cmp-table tbody tr:last-child td { border-bottom: 0; }
+.cmp-table td.cmp-best { background: rgba(112,48,160,.24); color: #fff; font-weight: 650; }
+
+.cmp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cmp-col-title { margin: 0 0 10px; font-size: .92rem; font-weight: 650; overflow-wrap: anywhere; }
+.cmp-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.cmp-list li { display: flex; align-items: flex-start; gap: 9px; color: var(--muted); font-size: .86rem; line-height: 1.7; }
+.cmp-list .icon { margin-top: 4px; }
+.cmp-ok { color: #b9e2c4; }
+.cmp-no { color: #e6b3b3; }
+.cmp-empty { color: var(--muted-2); font-size: .84rem; }
+.cmp-best-card { padding: 15px 16px; border-top: 1px solid rgba(181,139,211,.42); background: rgba(255,255,255,.025); }
+.cmp-best-card strong { display: block; margin-bottom: 5px; font-size: .9rem; font-weight: 650; overflow-wrap: anywhere; }
+.cmp-best-card span { color: var(--muted); font-size: .86rem; line-height: 1.75; }
+.cmp-more summary { display: flex; align-items: center; min-height: 44px; color: #d2b5e7; font-size: .73rem; font-weight: 650; letter-spacing: .15em; text-transform: uppercase; cursor: pointer; }
+.cmp-more[open] summary { margin-bottom: 8px; }
+
+.cmp-verdict { border-color: rgba(181,139,211,.4); background: linear-gradient(135deg, rgba(112,48,160,.22), var(--card)); }
+.cmp-verdict-top { display: flex; align-items: center; gap: 12px; }
+.cmp-verdict-icon { display: grid; place-items: center; flex: 0 0 auto; width: 46px; height: 46px; border: 1px solid rgba(181,139,211,.3); border-radius: 14px; background: rgba(112,48,160,.2); color: #e0c8f0; }
+.cmp-verdict-name { margin: 2px 0 0; font-size: clamp(1.25rem, 3vw, 1.7rem); font-weight: 650; overflow-wrap: anywhere; }
+.cmp-verdict-reason { margin: 14px 0 0; color: #ddd5e4; font-size: .93rem; line-height: 1.85; }
+.cmp-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
+.cmp-disclaimer { flex: 1 1 260px; margin: 0; color: var(--muted-2); font-size: .74rem; line-height: 1.7; }
+.cmp-status { min-height: 1.2em; margin: 8px 2px 0; color: #d2b5e7; font-size: .8rem; }
+
+.cmp-error { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 20px 22px; border-radius: var(--radius-lg); }
+.cmp-error-text { display: flex; align-items: flex-start; gap: 12px; flex: 1 1 240px; color: #ece3f2; font-size: .92rem; line-height: 1.7; }
+.cmp-error-text .icon { margin-top: 3px; color: var(--accent-light); }
+
+.cmp-skel { border-radius: 14px; background: linear-gradient(90deg, rgba(255,255,255,.05) 25%, rgba(255,255,255,.11) 50%, rgba(255,255,255,.05) 75%); background-size: 200% 100%; animation: cmp-shimmer 1.3s linear infinite; }
+.cmp-skel-head { height: 150px; }
+.cmp-skel-line { height: 14px; margin-top: 16px; border-radius: 999px; }
+@keyframes cmp-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@keyframes cmp-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.cmp-anim > * { animation: cmp-in .4s ease both; }
+
+@media (max-width: 760px) {
+  .cmp-fields, .cmp-heads, .cmp-cols { grid-template-columns: 1fr; }
+  .cmp-fields { gap: 12px; }
+}
+@media (max-width: 520px) {
+  .cmp-actions .button { width: 100%; }
+  .cmp-head { padding: 15px; }
+  .cmp-share { width: 100%; }
+}
   </style>
 </head>
 <body>
@@ -540,6 +648,7 @@
         <a href="#studio">Studio</a>
         <a href="#capabilities">What we do</a>
         <a href="#work">Initiatives</a>
+        <a href="#compare">Compare</a>
         <a href="#newsniom">NEWSNIOM</a>
         <a href="#connect">Connect</a>
       </nav>
@@ -655,6 +764,55 @@
       loading="lazy"
     >
   </div>
+</section>
+
+<section class="section" id="compare" aria-labelledby="cmp-title" lang="en" dir="ltr">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="cmp-i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="cmp-i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+    <symbol id="cmp-i-tablet" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="cmp-i-desktop" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+    <symbol id="cmp-i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="cmp-i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="cmp-i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4v1a3 3 0 0 0 3 3M16 6h4v1a3 3 0 0 1-3 3M12 13v4M8 20h8M10 17h4"/></symbol>
+    <symbol id="cmp-i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="cmp-i-retry" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6"/></symbol>
+    <symbol id="cmp-i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5h.01"/></symbol>
+  </svg>
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow" data-i18n="eyebrow">Compare</span>
+      <h2 class="section-title" id="cmp-title" data-i18n="title">Compare any two devices</h2>
+      <p class="section-subtitle" data-i18n="subtitle">Phones, laptops, tablets and computers — side by side, in seconds.</p>
+    </div>
+    <div class="cmp-switch" role="group" aria-label="Language / زبان">
+      <button type="button" data-cmp-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-cmp-lang="fa" aria-pressed="false" lang="fa">فا</button>
+    </div>
+  </div>
+
+  <p class="cmp-identity"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-cpu"/></svg><span data-i18n="welcome">I'm newniom ai, an AI built by Newniom. Enter two devices and I'll compare them for you.</span></p>
+
+  <form class="cmp-form glass" id="cmpForm" novalidate>
+    <div class="cmp-fields">
+      <div class="cmp-field">
+        <label class="cmp-label" for="cmpA" data-i18n="labelA">Device A</label>
+        <input class="cmp-input" id="cmpA" name="a" type="text" maxlength="60" autocomplete="off" spellcheck="false" enterkeyhint="go" dir="auto" required data-i18n-ph="phA" placeholder="e.g. iPhone 16">
+      </div>
+      <div class="cmp-field">
+        <label class="cmp-label" for="cmpB" data-i18n="labelB">Device B</label>
+        <input class="cmp-input" id="cmpB" name="b" type="text" maxlength="60" autocomplete="off" spellcheck="false" enterkeyhint="go" dir="auto" required data-i18n-ph="phB" placeholder="e.g. Galaxy S25">
+      </div>
+    </div>
+    <div class="cmp-examples" id="cmpExamples"><span class="cmp-examples-label" data-i18n="tryLabel">Try:</span></div>
+    <div class="cmp-actions">
+      <button class="button" id="cmpSubmit" type="submit"><span data-i18n="go">Compare</span> <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+    </div>
+  </form>
+
+  <div id="cmpResult" aria-live="polite" aria-busy="false"></div>
+  <p class="cmp-status" id="cmpStatus" role="status"></p>
 </section>
 
     <section class="section podcast-feature glass" id="newsniom" aria-labelledby="podcast-title">
@@ -776,7 +934,7 @@
       <a class="footer-brand" href="#home"><span>NEWNIOM</span></a>
       <div class="footer-meta">
         <span>Independent digital studio</span>
-        <div class="footer-links"><a href="#studio">Studio</a><a href="#capabilities">What we do</a><a href="#newsniom">NEWSNIOM</a><a href="mailto:Newniom.com@gmail.com">Contact</a></div>
+        <div class="footer-links"><a href="#studio">Studio</a><a href="#capabilities">What we do</a><a href="#compare">Compare</a><a href="#newsniom">NEWSNIOM</a><a href="mailto:Newniom.com@gmail.com">Contact</a></div>
         <div style="margin-top:12px">© <span id="year">2026</span> Newniom. All rights reserved.</div>
       </div>
     </footer>
@@ -848,5 +1006,476 @@
       }
     })();
   </script>
+<script>
+(() => {
+  'use strict';
+
+  // >>> Put your Worker address here (no trailing /compare) <<<
+  const WORKER_URL = 'https://newniom-compare.newniom-com.workers.dev';
+
+  const root = document.getElementById('compare');
+  if (!root) return;
+  const STORE_KEY = 'cmp-lang';
+  const NS = 'http://www.w3.org/2000/svg';
+
+  const I18N = {
+    en: {
+      eyebrow: 'Compare',
+      title: 'Compare any two devices',
+      subtitle: 'Phones, laptops, tablets and computers — side by side, in seconds.',
+      welcome: "I'm newniom ai, an AI built by Newniom. Enter two devices and I'll compare them for you.",
+      labelA: 'Device A', labelB: 'Device B',
+      phA: 'e.g. iPhone 16', phB: 'e.g. Galaxy S25',
+      tryLabel: 'Try:', go: 'Compare', going: 'Comparing…',
+      errEmpty: 'Please enter both device names.',
+      errSame: 'Please enter two different devices.',
+      errNetwork: "Couldn't reach the server. Check your connection and try again.",
+      errTimeout: 'This is taking too long. Please try again.',
+      errRate: 'Too many requests. Please wait a minute and try again.',
+      errQuota: "Today's free AI quota is used up. Please try again later.",
+      errBad: "That input wasn't valid. Check the device names and try again.",
+      errServer: 'Something went wrong on our side. Please try again.',
+      retry: 'Try again',
+      langNote: 'This result was written in another language. Press Compare to regenerate it in the selected language.',
+      scores: 'Scores', specs: 'Specifications', advantages: 'Advantages', bestFor: 'Best for',
+      prosCons: 'Pros & cons', pros: 'Pros', cons: 'Cons', verdict: 'Verdict',
+      spec: 'Spec', winner: 'Winner', tie: "It's a tie", over: '{x} over {y}',
+      share: 'Share result', copied: 'Summary copied to clipboard.', copyFail: "Couldn't copy. Please copy it manually.",
+      scoreWord: 'Score', none: '—',
+      m: { performance: 'Performance', display: 'Display', camera: 'Camera', battery: 'Battery', portability: 'Portability', value: 'Value' },
+      s: { screen: 'Screen', processor: 'Processor', ram: 'RAM', storage: 'Storage', camera: 'Camera', battery: 'Battery', os: 'OS', weight: 'Weight' },
+    },
+    fa: {
+      eyebrow: 'مقایسه',
+      title: 'هر دو دستگاه را مقایسه کن',
+      subtitle: 'گوشی، لپ‌تاپ، تبلت و کامپیوتر را کنار هم و در چند ثانیه مقایسه کن.',
+      welcome: 'من هوش مصنوعی newniom ai هستم. دو دستگاه را وارد کن تا برایت مقایسه کنم.',
+      labelA: 'دستگاه A', labelB: 'دستگاه B',
+      phA: 'مثلاً iPhone 16', phB: 'مثلاً Galaxy S25',
+      tryLabel: 'امتحان کن:', go: 'مقایسه', going: 'در حال مقایسه…',
+      errEmpty: 'لطفاً نام هر دو دستگاه را وارد کن.',
+      errSame: 'لطفاً دو دستگاه متفاوت وارد کن.',
+      errNetwork: 'اتصال به سرور برقرار نشد. اینترنت را بررسی کن و دوباره تلاش کن.',
+      errTimeout: 'پاسخ خیلی طول کشید. دوباره تلاش کن.',
+      errRate: 'درخواست‌ها زیاد بود. یک دقیقه صبر کن و دوباره تلاش کن.',
+      errQuota: 'سهمیه‌ی رایگان امروز تمام شده است. بعداً دوباره تلاش کن.',
+      errBad: 'ورودی معتبر نبود. نام دستگاه‌ها را بررسی کن و دوباره تلاش کن.',
+      errServer: 'مشکلی در سمت سرور پیش آمد. دوباره تلاش کن.',
+      retry: 'تلاش دوباره',
+      langNote: 'این نتیجه به زبان دیگری نوشته شده است. برای دریافت آن به زبان انتخابی، دوباره «مقایسه» را بزن.',
+      scores: 'امتیازها', specs: 'مشخصات فنی', advantages: 'برتری‌ها', bestFor: 'مناسب برای',
+      prosCons: 'مزایا و معایب', pros: 'مزایا', cons: 'معایب', verdict: 'نتیجه‌ی نهایی',
+      spec: 'مشخصه', winner: 'برنده', tie: 'مساوی', over: '{x} نسبت به {y}',
+      share: 'اشتراک‌گذاری نتیجه', copied: 'خلاصه در کلیپ‌بورد کپی شد.', copyFail: 'کپی نشد. لطفاً دستی کپی کن.',
+      scoreWord: 'امتیاز', none: '—',
+      m: { performance: 'عملکرد', display: 'نمایشگر', camera: 'دوربین', battery: 'باتری', portability: 'قابلیت حمل', value: 'ارزش خرید' },
+      s: { screen: 'صفحه‌نمایش', processor: 'پردازنده', ram: 'رم', storage: 'حافظه', camera: 'دوربین', battery: 'باتری', os: 'سیستم‌عامل', weight: 'وزن' },
+    },
+  };
+
+  const EXAMPLES = [['iPhone 16', 'Galaxy S25'], ['MacBook Air M3', 'Dell XPS 13'], ['iPad Air', 'Galaxy Tab S9']];
+  const METRICS = ['performance', 'display', 'camera', 'battery', 'portability', 'value'];
+  const SPECS = ['screen', 'processor', 'ram', 'storage', 'camera', 'battery', 'os', 'weight'];
+  const SPEC_SCORE = { screen: 'display', processor: 'performance', ram: 'performance', camera: 'camera', battery: 'battery', weight: 'portability' };
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const el = {
+    form: document.getElementById('cmpForm'),
+    a: document.getElementById('cmpA'),
+    b: document.getElementById('cmpB'),
+    submit: document.getElementById('cmpSubmit'),
+    examples: document.getElementById('cmpExamples'),
+    result: document.getElementById('cmpResult'),
+    status: document.getElementById('cmpStatus'),
+  };
+
+  let lang = 'en';
+  try { const s = localStorage.getItem(STORE_KEY); if (s === 'en' || s === 'fa') lang = s; } catch (e) {}
+  let reqId = 0;
+  let last = null;      // last request {a, b}
+  let lastData = null;  // last successful result
+  let busy = false;
+  let statusTimer = 0;
+
+  const t = (k) => I18N[lang][k];
+  const h = (tag, cls, txt) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt !== undefined && txt !== null) n.textContent = String(txt);
+    return n;
+  };
+  const auto = (n) => { n.setAttribute('dir', 'auto'); return n; };
+  const ico = (id, cls) => {
+    const s = document.createElementNS(NS, 'svg');
+    s.setAttribute('class', 'icon' + (cls ? ' ' + cls : ''));
+    s.setAttribute('aria-hidden', 'true');
+    const u = document.createElementNS(NS, 'use');
+    u.setAttribute('href', '#' + id);
+    s.appendChild(u);
+    return s;
+  };
+  const val = (v) => (v === undefined || v === null || String(v).trim() === '' ? t('none') : String(v));
+  const known = (v) => v !== undefined && v !== null && String(v).trim() !== '' && String(v).toLowerCase() !== 'unknown';
+  const num = (v) => { const n = typeof v === 'string' ? parseFloat(v) : v; return typeof n === 'number' && isFinite(n) ? Math.max(0, Math.min(10, n)) : null; };
+  const fmt = (n) => (n === null ? t('none') : (Math.round(n * 10) / 10).toString());
+
+  /* ---------- language ---------- */
+  function applyLang() {
+    root.setAttribute('lang', lang);
+    root.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+    root.querySelectorAll('[data-i18n]').forEach((n) => { if (!(busy && n.closest('#cmpSubmit'))) n.textContent = t(n.getAttribute('data-i18n')); });
+    root.querySelectorAll('[data-i18n-ph]').forEach((n) => n.setAttribute('placeholder', t(n.getAttribute('data-i18n-ph'))));
+    root.querySelectorAll('[data-cmp-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.getAttribute('data-cmp-lang') === lang)));
+    if (busy) el.submit.querySelector('span').textContent = t('going');
+    if (lastData && !busy) render(lastData, false);
+  }
+
+  root.querySelectorAll('[data-cmp-lang]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = btn.getAttribute('data-cmp-lang');
+      if (next === lang) return;
+      lang = next;
+      try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+      applyLang();
+    });
+  });
+
+  /* ---------- examples ---------- */
+  EXAMPLES.forEach(([x, y]) => {
+    const chip = h('button', 'cmp-chip', x + ' vs ' + y);
+    chip.type = 'button';
+    chip.addEventListener('click', () => { el.a.value = x; el.b.value = y; if (!busy) submit(x, y); });
+    el.examples.append(chip);
+  });
+
+  /* ---------- form ---------- */
+  const clean = (s) => s.replace(/\s+/g, ' ').trim();
+  el.form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (busy) return;
+    const a = clean(el.a.value), b = clean(el.b.value);
+    if (!a || !b) return showError(t('errEmpty'), false);
+    if (a.toLowerCase() === b.toLowerCase()) return showError(t('errSame'), false);
+    submit(a, b);
+  });
+
+  function setBusy(v) {
+    busy = v;
+    el.submit.disabled = v;
+    el.submit.querySelector('span').textContent = v ? t('going') : t('go');
+    el.result.setAttribute('aria-busy', String(v));
+  }
+
+  async function submit(a, b) {
+    const id = ++reqId;
+    const reqLang = lang;
+    last = { a, b };
+    setBusy(true);
+    showLoading();
+    try {
+      const data = await callWorker(a, b, reqLang);
+      if (id !== reqId) return;
+      if (!Array.isArray(data.devices) || data.devices.length < 2) {
+        setBusy(false);
+        lastData = null;
+        return showError(data.error || t('errServer'), false);
+      }
+      data._lang = reqLang;
+      lastData = data;
+      setBusy(false);
+      render(data, true);
+    } catch (err) {
+      if (id !== reqId) return;
+      setBusy(false);
+      const map = { rate_limited: 'errRate', quota_exceeded: 'errQuota', bad_input: 'errBad', same_device: 'errSame', bad_request: 'errBad', timeout: 'errTimeout', network: 'errNetwork' };
+      showError(t(map[err && err.code] || 'errServer'), true);
+    }
+  }
+
+  async function callWorker(a, b, reqLang) {
+    if (WORKER_URL.indexOf('YOUR-SUBDOMAIN') !== -1) console.warn('[compare] Set WORKER_URL to your deployed Worker address.');
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 50000);
+    let res;
+    try {
+      res = await fetch(WORKER_URL.replace(/\/+$/, '') + '/compare', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ a, b, lang: reqLang }),
+        signal: ctrl.signal,
+      });
+    } catch (e) {
+      throw { code: e && e.name === 'AbortError' ? 'timeout' : 'network' };
+    } finally {
+      clearTimeout(timer);
+    }
+    let data = null;
+    try { data = await res.json(); } catch (e) {}
+    if (!res.ok || !data) throw { code: (data && data.error) || 'server' };
+    return data;
+  }
+
+  /* ---------- states ---------- */
+  function showLoading() {
+    el.result.replaceChildren();
+    const heads = h('div', 'cmp-heads');
+    heads.append(h('div', 'cmp-skel cmp-skel-head'), h('div', 'cmp-skel cmp-skel-head'));
+    const p = h('div', 'cmp-panel glass');
+    for (let i = 0; i < 4; i++) p.append(h('div', 'cmp-skel cmp-skel-line'));
+    el.result.append(heads, p);
+  }
+
+  function showError(msg, canRetry) {
+    el.result.replaceChildren();
+    const box = h('div', 'cmp-error glass');
+    const text = h('div', 'cmp-error-text');
+    text.append(ico('cmp-i-alert'), auto(h('span', '', msg)));
+    box.append(text);
+    if (canRetry && last) {
+      const btn = h('button', 'button button-secondary');
+      btn.type = 'button';
+      btn.append(ico('cmp-i-retry', 'icon-sm'), h('span', '', t('retry')));
+      btn.addEventListener('click', () => submit(last.a, last.b));
+      box.append(btn);
+    }
+    el.result.append(box);
+  }
+
+  /* ---------- images (Wikipedia) ---------- */
+  const imgCache = new Map();
+  function wikiImage(name) {
+    if (imgCache.has(name)) return imgCache.get(name);
+    const u = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrlimit=3&prop=pageimages&piprop=thumbnail&pithumbsize=240&gsrsearch=' + encodeURIComponent(name);
+    const p = fetch(u)
+      .then((r) => r.json())
+      .then((j) => {
+        const pages = j && j.query && j.query.pages ? Object.values(j.query.pages) : [];
+        pages.sort((x, y) => (x.index || 0) - (y.index || 0));
+        const hit = pages.find((pg) => pg.thumbnail && pg.thumbnail.source);
+        if (!hit) return null;
+        try { return /(^|\.)wikimedia\.org$/.test(new URL(hit.thumbnail.source).hostname) ? hit.thumbnail.source : null; } catch (e) { return null; }
+      })
+      .catch(() => null);
+    imgCache.set(name, p);
+    return p;
+  }
+
+  function iconFor(d, category) {
+    const map = { phone: 'phone', laptop: 'laptop', tablet: 'tablet', computer: 'desktop' };
+    if (map[category]) return 'cmp-i-' + map[category];
+    const n = String(d.name || '').toLowerCase();
+    if (/iphone|galaxy s|galaxy z|pixel|phone|redmi|poco|oneplus|xperia|honor magic/.test(n)) return 'cmp-i-phone';
+    if (/ipad|tab |tablet|surface go|matepad/.test(n)) return 'cmp-i-tablet';
+    if (/macbook|laptop|thinkpad|zenbook|xps|legion|zephyrus|ideapad|vivobook|inspiron|spectre|surface laptop/.test(n)) return 'cmp-i-laptop';
+    if (/imac|mac mini|mac studio|mac pro|desktop|tower|optiplex|all-in-one|nuc/.test(n)) return 'cmp-i-desktop';
+    return 'i-cpu';
+  }
+
+  /* ---------- render ---------- */
+  function panel(title, extra) {
+    const p = h('section', 'cmp-panel glass' + (extra ? ' ' + extra : ''));
+    if (title) p.append(h('h3', 'cmp-h', title));
+    return p;
+  }
+  function notice(msg) {
+    const n = h('p', 'cmp-notice');
+    n.append(ico('cmp-i-alert', 'icon-sm'), auto(h('span', '', msg)));
+    return n;
+  }
+  function list(items, iconId, iconCls) {
+    const arr = Array.isArray(items) ? items.filter(Boolean) : [];
+    if (!arr.length) return auto(h('p', 'cmp-empty', t('none')));
+    const ul = h('ul', 'cmp-list');
+    arr.forEach((s) => { const li = h('li'); li.append(ico(iconId, 'icon-sm ' + iconCls), auto(h('span', '', s))); ul.append(li); });
+    return ul;
+  }
+
+  function headCard(d, letter, data) {
+    const card = h('article', 'cmp-head glass');
+    const media = h('div', 'cmp-media');
+    media.append(ico(iconFor(d, data.category), 'cmp-ph'));
+    const body = h('div');
+    const tag = h('div', 'cmp-tag-row');
+    tag.append(h('span', 'cmp-badge', letter.toUpperCase()));
+    if (data.verdict && data.verdict.winner === letter) {
+      const chip = h('span', 'cmp-win-chip'); chip.append(ico('cmp-i-trophy', 'icon-sm'), h('span', '', t('winner'))); tag.append(chip);
+    }
+    body.append(tag, auto(h('h3', 'cmp-name', d.name)));
+    const meta = [d.brand, d.year].filter(known).join(' · ');
+    if (meta) body.append(auto(h('p', 'cmp-meta', meta)));
+    if (known(d.price_range)) body.append(auto(h('span', 'cmp-price', d.price_range)));
+    card.append(media, body, auto(h('p', 'cmp-summary', d.summary || '')));
+    wikiImage(d.name).then((src) => {
+      if (!src || !media.isConnected) return;
+      const img = document.createElement('img');
+      img.loading = 'lazy'; img.decoding = 'async'; img.alt = d.name; img.referrerPolicy = 'no-referrer';
+      img.addEventListener('load', () => media.replaceChildren(img));
+      img.src = src;
+    });
+    return card;
+  }
+
+  function scorePanel(A, B) {
+    const p = panel(t('scores'));
+    const legend = h('div', 'cmp-legend');
+    legend.append(auto(h('span', '', A.name)), auto(h('span', '', B.name)));
+    p.append(legend);
+    const fills = [];
+    METRICS.forEach((k) => {
+      const a = num(A.scores && A.scores[k]), b = num(B.scores && B.scores[k]);
+      const aw = a !== null && b !== null && a > b, bw = a !== null && b !== null && b > a;
+      const row = h('div', 'cmp-row');
+      row.setAttribute('role', 'group');
+      row.setAttribute('aria-label', t('m')[k] + ': ' + A.name + ' ' + fmt(a) + ', ' + B.name + ' ' + fmt(b));
+      row.append(h('div', 'cmp-row-label', t('m')[k]));
+      const bars = h('div', 'cmp-bars');
+      const ta = h('div', 'cmp-track cmp-track-a'), tb = h('div', 'cmp-track cmp-track-b');
+      const fa = h('div', 'cmp-fill' + (aw ? ' cmp-win' : '')), fb = h('div', 'cmp-fill' + (bw ? ' cmp-win' : ''));
+      ta.append(fa); tb.append(fb);
+      fills.push([fa, a], [fb, b]);
+      bars.append(h('span', 'cmp-num' + (aw ? ' cmp-win' : ''), fmt(a)), ta, tb, h('span', 'cmp-num' + (bw ? ' cmp-win' : ''), fmt(b)));
+      row.append(bars);
+      p.append(row);
+    });
+    requestAnimationFrame(() => requestAnimationFrame(() => fills.forEach(([f, v]) => { f.style.width = (v === null ? 0 : v * 10) + '%'; })));
+    return p;
+  }
+
+  function specPanel(A, B) {
+    const p = panel(t('specs'));
+    const wrap = h('div', 'cmp-table-wrap');
+    wrap.tabIndex = 0;
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', t('specs'));
+    const table = h('table', 'cmp-table');
+    const thead = h('thead'), hr = h('tr');
+    [t('spec'), A.name, B.name].forEach((x) => { const th = auto(h('th', '', x)); th.scope = 'col'; hr.append(th); });
+    thead.append(hr);
+    const tbody = h('tbody');
+    SPECS.forEach((k) => {
+      const tr = h('tr');
+      const th = h('th', '', t('s')[k]); th.scope = 'row';
+      const ca = auto(h('td', '', val(A.specs && A.specs[k]))), cb = auto(h('td', '', val(B.specs && B.specs[k])));
+      const sk = SPEC_SCORE[k];
+      if (sk) {
+        const a = num(A.scores && A.scores[sk]), b = num(B.scores && B.scores[sk]);
+        if (a !== null && b !== null && a !== b) {
+          if (a > b && known(A.specs && A.specs[k])) ca.classList.add('cmp-best');
+          if (b > a && known(B.specs && B.specs[k])) cb.classList.add('cmp-best');
+        }
+      }
+      tr.append(th, ca, cb);
+      tbody.append(tr);
+    });
+    table.append(thead, tbody);
+    wrap.append(table);
+    p.append(wrap);
+    return p;
+  }
+
+  function summaryText(data) {
+    const [A, B] = data.devices;
+    const v = data.verdict || {};
+    const w = v.winner === 'a' ? A.name : v.winner === 'b' ? B.name : t('tie');
+    const lines = ['newniom ai — ' + A.name + ' vs ' + B.name, t('winner') + ': ' + w];
+    if (v.reason) lines.push(v.reason);
+    lines.push('');
+    METRICS.forEach((k) => lines.push(t('m')[k] + ': ' + fmt(num(A.scores && A.scores[k])) + ' / ' + fmt(num(B.scores && B.scores[k]))));
+    lines.push('', location.origin + location.pathname + '#compare');
+    return lines.join('\n');
+  }
+
+  function flash(msg) {
+    el.status.textContent = msg;
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(() => { el.status.textContent = ''; }, 3500);
+  }
+
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true; }
+    } catch (e) {}
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand('copy');
+      ta.remove();
+      return ok;
+    } catch (e) { return false; }
+  }
+
+  function render(data, scroll) {
+    const [A, B] = data.devices;
+    const v = data.verdict || {};
+    const out = el.result;
+    out.replaceChildren();
+    const frag = document.createDocumentFragment();
+
+    if (data.intro) frag.append(auto(h('p', 'cmp-intro', data.intro)));
+    if (data.error) frag.append(notice(data.error));
+    if (data._lang && data._lang !== lang) frag.append(notice(t('langNote')));
+
+    const heads = h('div', 'cmp-heads');
+    heads.append(headCard(A, 'a', data), headCard(B, 'b', data));
+    frag.append(heads, scorePanel(A, B), specPanel(A, B));
+
+    const adv = panel(t('advantages'));
+    const cols = h('div', 'cmp-cols');
+    const adv1 = h('div'), adv2 = h('div');
+    adv1.append(auto(h('h4', 'cmp-col-title', t('over').replace('{x}', A.name).replace('{y}', B.name))), list(data.advantages && data.advantages.a_over_b, 'cmp-i-check', 'cmp-ok'));
+    adv2.append(auto(h('h4', 'cmp-col-title', t('over').replace('{x}', B.name).replace('{y}', A.name))), list(data.advantages && data.advantages.b_over_a, 'cmp-i-check', 'cmp-ok'));
+    cols.append(adv1, adv2);
+    adv.append(cols);
+    frag.append(adv);
+
+    const best = panel(t('bestFor'));
+    const bc = h('div', 'cmp-cols');
+    [[A, 'a'], [B, 'b']].forEach(([d, k]) => {
+      const c = h('div', 'cmp-best-card');
+      c.append(auto(h('strong', '', d.name)), auto(h('span', '', (data.best_for && data.best_for[k]) || t('none'))));
+      bc.append(c);
+    });
+    best.append(bc);
+    frag.append(best);
+
+    const more = h('details', 'cmp-panel glass cmp-more');
+    more.append(h('summary', '', t('prosCons')));
+    const mc = h('div', 'cmp-cols');
+    [A, B].forEach((d) => {
+      const c = h('div');
+      c.append(auto(h('h4', 'cmp-col-title', d.name)), list(d.pros, 'cmp-i-check', 'cmp-ok'), h('div', 'cmp-gap'), list(d.cons, 'cmp-i-x', 'cmp-no'));
+      mc.append(c);
+    });
+    more.append(mc);
+    frag.append(more);
+
+    const ver = panel('', 'cmp-verdict');
+    const top = h('div', 'cmp-verdict-top');
+    const vi = h('span', 'cmp-verdict-icon'); vi.append(ico('cmp-i-trophy', 'icon-lg'));
+    const vt = h('div');
+    vt.append(h('div', 'cmp-h', t('verdict')), auto(h('p', 'cmp-verdict-name', v.winner === 'a' ? A.name : v.winner === 'b' ? B.name : t('tie'))));
+    vt.firstChild.style.margin = '0';
+    top.append(vi, vt);
+    ver.append(top);
+    if (v.reason) ver.append(auto(h('p', 'cmp-verdict-reason', v.reason)));
+    const foot = h('div', 'cmp-foot');
+    if (data.disclaimer) foot.append(auto(h('p', 'cmp-disclaimer', data.disclaimer)));
+    const share = h('button', 'button button-secondary cmp-share');
+    share.type = 'button';
+    share.append(ico('cmp-i-copy', 'icon-sm'), h('span', '', t('share')));
+    share.addEventListener('click', async () => flash((await copyText(summaryText(data))) ? t('copied') : t('copyFail')));
+    foot.append(share);
+    ver.append(foot);
+    frag.append(ver);
+
+    out.append(frag);
+    if (!reduceMotion && scroll) out.classList.add('cmp-anim'); else out.classList.remove('cmp-anim');
+    if (scroll) out.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  applyLang();
+})();
+</script>
 </body>
 </html>
